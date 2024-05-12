@@ -1,0 +1,87 @@
+/* Styling for the card collection container */
+.card-collection {
+  padding: 50px;
+}
+
+/* Styling for the heading */
+.heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+/* Container for the cards with flex layout */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 77em;
+    margin: 0 auto;
+}
+
+/* Style for individual service cards */
+.service-card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Style for card content */
+.service-card .card-body {
+  padding: 20px;
+}
+
+.service-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #193378;
+}
+
+.service-card .card-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Style for FontAwesome icons */
+.icon {
+  margin-bottom: 15px;
+  color: #193378; /* Change the icon color */
+    align-content: center;
+
+}
+
+/* Style for the arrow icon */
+.arrow-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.arrow {
+  color: #193378;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .service-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .service-card {
+    width: 100%;
+  }
+}

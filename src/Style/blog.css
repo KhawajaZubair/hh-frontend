@@ -1,0 +1,102 @@
+/* Doctor Section */
+.blog-section {
+  padding: 60px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.bl-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.bl-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #000000;
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+/* Doctor Cards */
+.bl-cards-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* .bl-card {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+} */
+
+.bl-card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.bl-card-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.bl-card-title {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.vm-btn {
+  margin-top: 35px;
+  border: none;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 16px; /* Adjust font size for button text */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  outline: none;
+  width:fit-content;
+}
+.vm-btn:hover {
+     background-color: #4caf4f41 ;
+   color: black;
+}
+/* View More Link */
+.bl-card .vm-link {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  outline: none;
+}
+
+.vm-link:hover {
+  color: lightseagreen;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .dt-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .dt-card {
+    width: 100%;
+  }
+}

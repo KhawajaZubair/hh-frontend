@@ -1,0 +1,46 @@
+.medicine-section {
+  padding: 40px 0;
+  background-color: #CCF8FF;
+}
+.medicine-heading {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.medicine-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  width: 26% !important;
+  padding: 10px !important;
+  border: none !important;
+  border-radius: 15px !important;
+  background-color: #4caf4f41 !important;
+  color: rgb(0 0 0) !important;
+  cursor: pointer !important;
+  position: relative !important;
+}
+
+.btn-primary:hover {
+   background-color: #32b839 !important;
+  color: azure !important;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .medicine-heading {
+    font-size: 28px;
+  }
+
+  .medicine-description {
+    font-size: 16px;
+  }
+}

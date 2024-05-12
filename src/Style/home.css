@@ -1,0 +1,32 @@
+.home {
+  background-color: #c0f0f7;
+}
+.title {
+  font-weight: 400;
+}
+.home span {
+  font-weight: 800;
+  color: #42b0b4;
+}
+.homeimage {
+  width: 90em;
+  height: 38em;
+  max-width: 90em !important;
+  max-height: 70em !important;
+  float: right;
+}
+.homebtn {
+  width: 26% !important;
+  padding: 10px !important;
+  border: none !important;
+  border-radius: 20px !important;
+  background-color: #4caf4f41 !important;
+  color: rgb(0 0 0) !important;
+  cursor: pointer !important;
+  position: relative !important;
+}
+
+.homebtn:hover {
+  background-color: #32b839 !important;
+  color: azure !important;
+}
