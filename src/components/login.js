@@ -1,6 +1,7 @@
 import React from "react";
 import "../Style/login.css";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const {
@@ -60,16 +61,16 @@ export default function Login() {
         </div>
 
         <div className="extra-links">
-          <a href="#">Forgot Password?</a>
+          <Link to="/">Forgot Password?</Link>
           <span> | </span>
-          <a href="signup">Register Now</a>
+          <Link to="signup">Register Now</Link>
         </div>
         <div className="form-group">
           <button type="submit">Login</button>
         </div>
 
         <div className="extra-links">
-          <a href="app">Go Back</a>
+          <Link to="app">Go Back</Link>
         </div>
       </form>
     </div>

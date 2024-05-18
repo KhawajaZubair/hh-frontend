@@ -1,6 +1,6 @@
 import React from "react";
 import "../Style/medicine.css";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import med1 from "../Assets/img/med1.png";
 import med2 from "../Assets/img/med2.png";
 import med3 from "../Assets/img/med3.png";
@@ -15,16 +15,16 @@ const Medicine = () => {
           <Col xs={8} md={6} className="text-center mb-4">
             <Carousel className="ml-2 sliderimg">
               <Carousel.Item>
-                <img src={med2} />
+                <img src={med2} alt="mg-1" />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={med1} />
+                <img src={med1} alt="mg-2" />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={med3} />
+                <img src={med3} alt="mg-3" />
               </Carousel.Item>
               <Carousel.Item>
-                <img src={med4} />
+                <img src={med4} alt="mg-4" />
               </Carousel.Item>
             </Carousel>
           </Col>
