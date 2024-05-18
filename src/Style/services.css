@@ -14,12 +14,12 @@
 
 /* Container for the cards with flex layout */
 .card-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 77em;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 77em;
+  margin: 0 auto;
 }
 
 /* Style for individual service cards */
@@ -59,8 +59,7 @@
 .icon {
   margin-bottom: 15px;
   color: #193378; /* Change the icon color */
-    align-content: center;
-
+  align-content: center;
 }
 
 /* Style for the arrow icon */
@@ -84,4 +83,12 @@
   .service-card {
     width: 100%;
   }
+}
+
+.remove-decoration {
+  text-decoration: none;
+}
+
+.remove-decoration:hover {
+  text-decoration: none;
 }

@@ -63,14 +63,14 @@ export default function Login() {
         <div className="extra-links">
           <Link to="/">Forgot Password?</Link>
           <span> | </span>
-          <Link to="signup">Register Now</Link>
+          <Link to="/signup">Register Now</Link>
         </div>
         <div className="form-group">
-          <button type="submit">Login</button>
+          <button type="/submit">Login</button>
         </div>
 
         <div className="extra-links">
-          <Link to="app">Go Back</Link>
+          <Link to="/app">Go Back</Link>
         </div>
       </form>
     </div>

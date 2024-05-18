@@ -23,6 +23,15 @@ const Slider = () => {
     image7,
     image8,
     image9,
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
   ]; // Add more images as needed
 
   return (
@@ -30,12 +39,6 @@ const Slider = () => {
       <div className="slider-img">
         {images.map((image, index) => (
           <div className="slide" key={index}>
-            <img src={image} alt={`slider-img-${index + 1}`} />
-          </div>
-        ))}
-        {/* Loop through the slider images again */}
-        {images.map((image, index) => (
-          <div className="slide" key={index + images.length}>
             <img src={image} alt={`slider-img-${index + 1}`} />
           </div>
         ))}

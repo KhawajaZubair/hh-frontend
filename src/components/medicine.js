@@ -12,7 +12,7 @@ const Medicine = () => {
     <section className="medicine-section">
       <Container>
         <Row className="justify-content-center align-items-center">
-          <Col xs={8} md={6} className="text-center mb-4">
+          <Col md={6} sm={12} className="text-center mb-4">
             <Carousel className="ml-2 sliderimg">
               <Carousel.Item>
                 <img src={med2} alt="mg-1" />
@@ -28,7 +28,7 @@ const Medicine = () => {
               </Carousel.Item>
             </Carousel>
           </Col>
-          <Col xs={4} md={6} className="text-center mb-4">
+          <Col md={6} sm={12} className="text-center mb-4">
             <h1 className="medicine-heading mb-4">Discover Medicines</h1>
             <p className="medicine-description mb-4">
               Explore a range of high-quality medicines for your health needs.

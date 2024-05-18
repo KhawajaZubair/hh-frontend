@@ -15,18 +15,49 @@ import "../Style/services.css";
 
 function CardWithFontAwesome({ icon, title, text, linkTo }) {
   return (
-    <Card className="service-card">
-      <Card.Body>
-        <FontAwesomeIcon icon={icon} size="2x" className="icon" />
-        <Card.Title>{title}</Card.Title>
-        <Card.Text>{text}</Card.Text>
-        <div className="arrow-container">
-          <Link to={linkTo} className="arrow-link">
-            <FontAwesomeIcon icon={faArrowRight} size="1x" className="arrow" />
-          </Link>
+    <>
+      {" "}
+      {title === "Symptom Checker" ? (
+        <div
+          className="arrow-link remove-decoration"
+          onClick={() => {
+            window.open("https://hh-symptom-checker.netlify.app/");
+          }}
+        >
+          <Card className="service-card">
+            <Card.Body>
+              <FontAwesomeIcon icon={icon} size="2x" className="icon" />
+              <Card.Title>{title}</Card.Title>
+              <Card.Text>{text}</Card.Text>
+              <div className="arrow-container">
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  size="1x"
+                  className="arrow"
+                />
+              </div>
+            </Card.Body>
+          </Card>
         </div>
-      </Card.Body>
-    </Card>
+      ) : (
+        <Link to={linkTo} className="arrow-link remove-decoration">
+          <Card className="service-card">
+            <Card.Body>
+              <FontAwesomeIcon icon={icon} size="2x" className="icon" />
+              <Card.Title>{title}</Card.Title>
+              <Card.Text>{text}</Card.Text>
+              <div className="arrow-container">
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  size="1x"
+                  className="arrow"
+                />
+              </div>
+            </Card.Body>
+          </Card>
+        </Link>
+      )}
+    </>
   );
 }
 
@@ -54,7 +85,7 @@ function CardCollection() {
       icon: faStethoscope,
       title: "Symptom Checker",
       text: "Check symptoms and get medical advice",
-      linkTo: "symptom-checker",
+      linkTo: "/symptom-checker",
     },
     {
       icon: faFlask,
