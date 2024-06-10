@@ -14,9 +14,15 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ms-5">
             <NavDropdown title="Doctors" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Heart</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Kidney</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Lungs</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                Dermatologist
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Neurologist
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                Gastroenterologist
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Doctors in Lahore
@@ -24,9 +30,15 @@ function NavBar() {
             </NavDropdown>
             <Nav.Link href="/medicine-page">Medicines</Nav.Link>
             <NavDropdown title="Hospitals" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">CCU</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">ABK</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">MAO</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">
+                Doctors Hospital
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Shalamar Hospital
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                Omar Hospital
+              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 Hospitals in Lahore

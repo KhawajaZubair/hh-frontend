@@ -7,7 +7,10 @@
   font-weight: bold;
   color: #333;
 }
+.sliderimg{
+    animation: normal 3s ;
 
+}
 .medicine-description {
   font-size: 18px;
   color: #555;
