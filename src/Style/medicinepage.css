@@ -1,0 +1,20 @@
+.sliderimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto; /* Adds margin from the top */
+  width: 35%;
+  max-width: 800px; /* Adjust the max-width as needed */
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+.card{
+    border: none;
+}
+

@@ -4,7 +4,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import med1 from "../Assets/img/med1.png";
 import med2 from "../Assets/img/med2.png";
 import med3 from "../Assets/img/med3.png";
-import med4 from "../Assets/img/med4.png";
+import med4 from "../Assets/img/med5.png";
 import Carousel from "react-bootstrap/Carousel";
 
 const Medicine = () => {
@@ -13,7 +13,7 @@ const Medicine = () => {
       <Container>
         <Row className="justify-content-center align-items-center">
           <Col md={6} sm={12} className="text-center mb-4 ">
-            <Carousel controls={false} className="ml-2 sliderimg">
+            <Carousel controls={false} className="ml-2 sliderimg1">
               <Carousel.Item>
                 <img src={med2} alt="mg-1" />
               </Carousel.Item>
