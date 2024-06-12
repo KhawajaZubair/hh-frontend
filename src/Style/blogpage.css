@@ -1,10 +1,12 @@
 /* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f8f9fa;
+  background-color: #f4f7f6;
   color: #333;
 }
 
@@ -37,21 +39,46 @@ a:hover {
   margin-left: 15px;
 }
 
+/* Blog Header */
+.blog-header {
+  background-color: #343a40;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.blog-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.blog-header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
 /* Blog content */
 .blog-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 30px 0;
+  gap: 30px;
 }
 
 .blog-post {
   width: calc(33.33% - 20px); /* Adjust based on desired column count */
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .blog-image img {
@@ -67,14 +94,16 @@ a:hover {
 }
 
 .blog-title {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .blog-description {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #666;
   margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 .blog-meta {
@@ -86,6 +115,8 @@ a:hover {
 
 .read-more {
   color: #007bff;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 /* Footer */

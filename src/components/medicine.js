@@ -13,7 +13,11 @@ const Medicine = () => {
       <Container>
         <Row className="justify-content-center align-items-center">
           <Col md={6} sm={12} className="text-center mb-4 ">
-            <Carousel controls={false} className="ml-2 sliderimg1">
+            <Carousel
+              controls={false}
+              indicators={false}
+              className="ml-2 sliderimg1"
+            >
               <Carousel.Item>
                 <img src={med2} alt="mg-1" />
               </Carousel.Item>

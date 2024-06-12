@@ -55,7 +55,7 @@ const MedicinePage = () => {
       <NavBar />
 
       <Container>
-        <Carousel controls={false} className="sliderimg">
+        <Carousel controls={false} indicators={false} className="sliderimg">
           <Carousel.Item>
             <img src={med2} alt="med-1" />
           </Carousel.Item>
@@ -78,7 +78,7 @@ const MedicinePage = () => {
             </Col>
           ))}
         </Row>
-      <NavDropdown.Divider />
+        <NavDropdown.Divider />
       </Container>
       <Blogs />
       <Footer />

@@ -6,9 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Blog1 from "../Assets/img/Blog1.png";
 import Blog2 from "../Assets/img/Blog2.png";
 import Blog3 from "../Assets/img/Blog3.png";
-import Blog4 from "../Assets/img/Blog1.png";
-import Blog5 from "../Assets/img/Blog2.png";
-import Blog6 from "../Assets/img/Blog3.png";
+import Blog4 from "../Assets/blogcardimg/blog1.jpg";
+import Blog5 from "../Assets/blogcardimg/blog2.jpg";
+import Blog6 from "../Assets/blogcardimg/blog3.jpg";
 
 const BlogPage = () => {
   const blogPosts = [
@@ -37,25 +37,22 @@ const BlogPage = () => {
       image: Blog3,
     },
     {
-      title: "New Frontiers in Medical Research",
-      description:
-        "Learn about groundbreaking research initiatives pushing the boundaries of medical science.",
+      title: "Stress Release",
+      description: "Difference Between Exercise and Yoga!",
       author: "Emily Brown",
       date: "April 20, 2024",
       image: Blog4,
     },
     {
-      title: "Nutrition and Wellness Tips",
-      description:
-        "Discover expert advice on nutrition and wellness for maintaining a healthy lifestyle.",
+      title: "General Health",
+      description: "How To Stop Headache - Easy Tips And Tricks",
       author: "David Wilson",
       date: "April 18, 2024",
       image: Blog5,
     },
     {
-      title: "Mental Health Awareness Campaign",
-      description:
-        "Join the movement to raise awareness about mental health and destigmatize seeking help.",
+      title: "Mental Health Medicines Awareness",
+      description: "Side Effects & Different Forms Of Medicines",
       author: "Sophia Lee",
       date: "April 15, 2024",
       image: Blog6,
@@ -66,7 +63,12 @@ const BlogPage = () => {
   return (
     <div className="blog-page">
       <NavBar />
-
+      <header className="blog-header">
+        <div className="container">
+          <h1>Holistic Health Blog</h1>
+          <p>Insights and updates on the latest in healthcare and wellness</p>
+        </div>
+      </header>
       <div className="container blog-content">
         {blogPosts.map((post, index) => (
           <div key={index} className="blog-post">
@@ -87,7 +89,6 @@ const BlogPage = () => {
           </div>
         ))}
       </div>
-
       <footer className="footer">
         <div className="container footer-content">
           <p className="footer-text">
