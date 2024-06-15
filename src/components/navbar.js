@@ -30,7 +30,7 @@ function NavBar() {
             </NavDropdown>
             <Nav.Link href="/medicine-page">Medicines</Nav.Link>
             <NavDropdown title="Hospitals" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
+              <NavDropdown.Item as={Link} to="/app1">
                 Doctors Hospital
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

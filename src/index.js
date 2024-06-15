@@ -9,6 +9,7 @@ import Signup from "./components/signup";
 import BlogPage from "./pages/BlogPage";
 import About from "./pages/About";
 import MedicinePage from "./pages/MedicinePage";
+import App1 from "./hospitals/App1";
 const router = createBrowserRouter([
   {
     path: "login",
@@ -35,8 +36,12 @@ const router = createBrowserRouter([
     element: <About />,
   },
   {
-     path: "medicine-page",
+    path: "medicine-page",
     element: <MedicinePage />,
+  },
+  {
+    path: "app1",
+    element: <App1 />,
   },
 ]);
 

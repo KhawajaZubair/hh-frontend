@@ -1,0 +1,172 @@
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+/* Hero Section */
+.hero {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Hospital Details */
+.hospital-details {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.hospital-details h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.hospital-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hospital-details .btn-success {
+  background-color: #28a745;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.hospital-details .btn-success:hover {
+  background-color: #218838;
+}
+
+/* Services */
+.services {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.services h2 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+.services .list-group-item {
+  border: none;
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Doctor List */
+.doctor-list {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-list h2 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body h5 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* About Hospital Section */
+.about-hospital {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.about-hospital h2, .about-hospital h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-hospital p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-hospital ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-hospital ul li {
+  margin-bottom: 10px;
+  color: #666;
+  line-height: 1.6;
+}
+
