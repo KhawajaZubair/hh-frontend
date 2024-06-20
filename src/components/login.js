@@ -1,28 +1,48 @@
-import React from "react";
-import "../Style/login.css";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import "../Style/login.css";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      username: "",
-      email: "",
-      password: "",
-      isAdmin: true,
-      createdAt: "",
-    },
-  });
+  } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  useEffect(() => {
+    if (localStorage.getItem("user-info")) {
+      navigate("/app");
+    }
+  }, [navigate]);
+
+  async function loginapi(data) {
+    const { email, password } = data;
+    let item = { email, password };
+    try {
+      let result = await fetch(
+        "https://holistichlth.000webhostapp.com/api/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify(item),
+        }
+      );
+      result = await result.json();
+      localStorage.setItem("user-info", JSON.stringify(result));
+      navigate("/app");
+    } catch (error) {
+      console.error("There was an error logging in:", error);
+    }
+  }
 
   return (
     <div className="form-container">
-      <form onSubmit={handleSubmit(onSubmit)} className="form">
+      <form onSubmit={handleSubmit(loginapi)} className="form">
         <h2>Login</h2>
         <div className="form-group">
           <label htmlFor="email">Email</label>
@@ -66,7 +86,7 @@ export default function Login() {
           <Link to="/signup">Register Now</Link>
         </div>
         <div className="form-group">
-          <button type="/submit">Login</button>
+          <button type="submit">Login</button>
         </div>
 
         <div className="extra-links">

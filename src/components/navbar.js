@@ -1,9 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../Assets/logos/hh3.png";
 
 function NavBar() {
+  const navigate = useNavigate();
+
+  const handleLogin = (status) => {
+    navigate("/login", { state: { status } });
+  };
+
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
       <Container>
@@ -68,12 +74,12 @@ function NavBar() {
           </Nav>
           <Nav>
             <NavDropdown title="Join Now" id="collapsible-nav-dropdown">
-              <Link to="/login" className="dropdown-item">
+              <NavDropdown.Item onClick={() => handleLogin(1)}>
                 Doctor
-              </Link>
-              <Link to="/login" className="dropdown-item">
+              </NavDropdown.Item>
+              <NavDropdown.Item onClick={() => handleLogin(0)}>
                 Patient
-              </Link>
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
