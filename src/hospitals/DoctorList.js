@@ -11,7 +11,7 @@ const doctors = [
   },
   {
     name: "Dr. Khola Zeeshan",
-    specialty: "Gynecologist, Fertility Consultant, Obstetrician",
+    specialty: "Gynecologist, Fertility Consultant",
     experience: "15 Years",
     fee: "Rs 3000",
     waitTime: "15-30 mins",
@@ -26,7 +26,7 @@ function DoctorList() {
       <h2>Doctors Available</h2>
       <div className="row">
         {doctors.map((doctor, index) => (
-          <div className="col-md-4 mb-4" key={index}>
+          <div className="col-md-4 mb-4 listcard" key={index}>
             <div className="card">
               <img
                 src={doctor.img}

@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/navbar";
 import Blogs from "../components/blogcard";
 import Footer from "../components/footer";
 import "../Style/medicinepage.css";
-import { Container, Row, Col, NavDropdown } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  NavDropdown,
+  FormControl,
+  InputGroup,
+} from "react-bootstrap";
 import MedCard from "./medicinecard";
 import med1 from "../Assets/img/med1.png";
 import med2 from "../Assets/img/med2.png";
@@ -15,45 +22,58 @@ import med8 from "../Assets/img/med8.png";
 import Carousel from "react-bootstrap/Carousel";
 
 const MedicinePage = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
   const products = [
     {
       title: "Panadol (500mg)",
-      description: "Manufacturer: GlaxoSmithKline Generic Name: Paracetamol",
+      description: "Manufacturer: GlaxoSmithKline - Generic Name: Paracetamol",
+      formula: "Paracetamol",
       img: med5,
     },
     {
       title: "Imodium® (2mg)",
-      description: "Manufacturer: Johnson & Johnson Generic Name: Loperamide",
+      description: "Manufacturer: Johnson & Johnson - Generic Name: Loperamide",
+      formula: "Loperamide",
       img: med2,
     },
     {
       title: "Novidat® (500mg)",
       description:
-        "Manufacturer: SAMI Pharmaceuticals (Prvte.) Lmtd. Generic Name: Ciprofloxacin",
+        "Manufacturer: SAMI Pharmaceuticals (Prvte.) Lmtd. - Generic Name: Ciprofloxacin",
+      formula: "Ciprofloxacin",
       img: med6,
     },
     {
       title: "Risek® (20mg)",
-      description: "Manufacturer:  AstraZeneca - Generic Name: Omeprazole",
+      description: "Manufacturer: AstraZeneca - Generic Name: Omeprazole",
+      formula: "Omeprazole",
       img: med3,
     },
     {
       title: "Rigix (10mg)",
       description: "Manufacturer: AGP Limited - Generic Name: Cetirizine",
+      formula: "Cetirizine",
       img: med7,
     },
     {
-      title: "Nims® (100mg) ",
+      title: "Nims® (100mg)",
       description: "Generic Name: Nimesulide",
+      formula: "Nimesulide",
       img: med8,
     },
     // Add more products as needed
   ];
 
+  const filteredProducts = products.filter(
+    (product) =>
+      product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.formula.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div>
       <NavBar />
-
       <Container>
         <Carousel controls={false} indicators={false} className="sliderimg">
           <Carousel.Item>
@@ -71,8 +91,15 @@ const MedicinePage = () => {
         </Carousel>
         <NavDropdown.Divider />
         <h3 className="mt-4 mb-4 text-center">Medicines</h3>
+        <InputGroup className="mb-4">
+          <FormControl
+            placeholder="Search by name or formula"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </InputGroup>
         <Row>
-          {products.map((product, index) => (
+          {filteredProducts.map((product, index) => (
             <Col key={index} sm={12} md={6} lg={4} className="mb-5">
               <MedCard {...product} />
             </Col>
