@@ -1,98 +1,92 @@
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
 import "../Style/login.css";
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useNavigate } from "react-router-dom";
 
-export default function Login() {
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [status, setStatus] = useState(0); // 0 for patient, 1 for doctor
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
 
-  useEffect(() => {
-    if (localStorage.getItem("user-info")) {
-      navigate("/app");
-    }
-  }, [navigate]);
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-  async function loginapi(data) {
-    const { email, password } = data;
-    let item = { email, password };
     try {
-      let result = await fetch(
-        "https://holistichlth.000webhostapp.com/api/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(item),
-        }
-      );
-      result = await result.json();
-      localStorage.setItem("user-info", JSON.stringify(result));
-      navigate("/app");
-    } catch (error) {
-      console.error("There was an error logging in:", error);
+      const response = await fetch("http://127.0.0.1:8000/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+          status,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.errors || "Invalid email password or status!");
+      } else {
+        console.log("User logged in:", data.user);
+        localStorage.setItem("token", data.token); // Store the token in localStorage
+        navigate("/app");
+      }
+    } catch (err) {
+      setError("Network error: " + err.message);
     }
-  }
+  };
 
   return (
-    <div className="form-container">
-      <form onSubmit={handleSubmit(loginapi)} className="form">
+    <div className="login-container">
+      <div className="login-form">
         <h2>Login</h2>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            id="email"
-            type="email"
-            {...register("email", {
-              required: "Email is required",
-              maxLength: {
-                value: 50,
-                message: "Email should have at most 50 characters",
-              },
-              pattern: {
-                value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-                message: "Invalid email address",
-              },
-            })}
-          />
-          {errors.email && <small>{errors.email.message}</small>}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            {...register("password", {
-              required: "Password is required",
-              minLength: {
-                value: 8,
-                message: "Password should have at least 8 characters",
-              },
-            })}
-          />
-          {errors.password && <small>{errors.password.message}</small>}
-        </div>
-
-        <div className="extra-links">
-          <Link to="/">Forgot Password?</Link>
-          <span> | </span>
-          <Link to="/signup">Register Now</Link>
-        </div>
-        <div className="form-group">
+        <p className="login-description">
+          Enter your credentials to access your account.
+        </p>
+        <form onSubmit={handleLogin}>
+          <div className="login-form-group">
+            <label>Email:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="login-form-group">
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div className="login-form-group">
+            <label>Status:</label>
+            <select
+              value={status}
+              onChange={(e) => setStatus(Number(e.target.value))}
+            >
+              <option value={0}>Patient</option>
+              <option value={1}>Doctor</option>
+            </select>
+          </div>
           <button type="submit">Login</button>
-        </div>
-
-        <div className="extra-links">
-          <Link to="/app">Go Back</Link>
-        </div>
-      </form>
+          <div className="extra-links">
+            <Link to="/signup">Register Now</Link>
+            <br />
+            <Link to="/app">Go Back</Link>
+          </div>
+        </form>
+        {error && <div className="alert alert-danger">{error}</div>}
+      </div>
     </div>
   );
 }
+
+export default Login;
