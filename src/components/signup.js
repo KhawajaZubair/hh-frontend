@@ -1,111 +1,226 @@
-import React from "react";
-import "../Style/signup.css";
-import { useForm } from "react-hook-form";
+import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import "../Style/signup.css";
 
-function Signup({ toggleSignUpForm }) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    watch,
-  } = useForm();
+function SignUp() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirmation, setPasswordConfirmation] = useState("");
+  const [userType, setUserType] = useState("");
+  const [gender, setGender] = useState("");
+  const [error, setError] = useState("");
 
-  const navigate = useNavigate(); // For redirecting to the login page
+  const validateForm = () => {
+    if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+      setError("Invalid email address");
+      return false;
+    }
+    if (password.length < 6) {
+      setError("Password must be at least 6 characters long");
+      return false;
+    }
+    if (password !== passwordConfirmation) {
+      setError("Passwords do not match");
+      return false;
+    }
+    setError("");
+    return true;
+  };
 
-  const onSubmit = async (data) => {
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+
+    const status = userType === "patient" ? 0 : 1;
+
     try {
-      const response = await axios.post(
+      const response = await fetch(
         "https://holistichlth.000webhostapp.com/api/register",
         {
-          name: data.username,
-          email: data.email,
-          password: data.password,
-          gender: data.gender,
-          status: 0,
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            password,
+            password_confirmation: passwordConfirmation,
+            status,
+            gender,
+          }),
         }
       );
-      console.log("Registration Successful:", response.data);
-      navigate("/login"); // Redirect to login page upon successful registration
-    } catch (error) {
-      console.error("There was an error registering:", error);
-      if (error.response) {
-        console.error("Server responded with status:", error.response.status);
-      } else if (error.request) {
-        console.error("No response received:", error.request);
+
+      const data = await response.json();
+
+      if (response.ok) {
+        console.log("User registered:", data.user);
       } else {
-        console.error("Error setting up the request:", error.message);
+        setError(data.errors || "Something went wrong!");
       }
+    } catch (err) {
+      setError("Network error: " + err.message);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="form">
-      <h2>Sign Up</h2>
-      <div className="form-group">
-        <label htmlFor="username">Name</label>
-        <input
-          id="username"
-          type="text"
-          {...register("username", { required: true })}
-        />
-        {errors.username && <small>Username is required</small>}
+    <div className="container signup-container">
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <div className="card signup-card mt-5">
+            <div className="card-body signup-card-body">
+              <h3 className="signup-card-title">Sign Up</h3>
+              {error && (
+                <div className="alert signup-alert-danger">{error}</div>
+              )}
+              <form onSubmit={handleRegister}>
+                <div className="form-group signup-form-group">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    className="form-control signup-form-control"
+                    id="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="form-group signup-form-group">
+                  <label htmlFor="email">Email address</label>
+                  <input
+                    type="email"
+                    className="form-control signup-form-control"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="form-group signup-form-group">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    className="form-control signup-form-control"
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="form-group signup-form-group">
+                  <label htmlFor="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    className="form-control signup-form-control"
+                    id="confirmPassword"
+                    value={passwordConfirmation}
+                    onChange={(e) => setPasswordConfirmation(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="form-group signup-form-group">
+                  <label>User Type</label>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="userType"
+                      id="patient"
+                      value="patient"
+                      checked={userType === "patient"}
+                      onChange={(e) => setUserType(e.target.value)}
+                    />
+                    <label
+                      className="form-check-label signup-form-check-label"
+                      htmlFor="patient"
+                    >
+                      Patient
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="userType"
+                      id="doctor"
+                      value="doctor"
+                      checked={userType === "doctor"}
+                      onChange={(e) => setUserType(e.target.value)}
+                    />
+                    <label
+                      className="form-check-label signup-form-check-label"
+                      htmlFor="doctor"
+                    >
+                      Doctor
+                    </label>
+                  </div>
+                </div>
+                <div className="form-group signup-form-group">
+                  <label>Gender</label>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="male"
+                      value="male"
+                      checked={gender === "male"}
+                      onChange={(e) => setGender(e.target.value)}
+                    />
+                    <label
+                      className="form-check-label signup-form-check-label"
+                      htmlFor="male"
+                    >
+                      Male
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="female"
+                      value="female"
+                      checked={gender === "female"}
+                      onChange={(e) => setGender(e.target.value)}
+                    />
+                    <label
+                      className="form-check-label signup-form-check-label"
+                      htmlFor="female"
+                    >
+                      Female
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="gender"
+                      id="other"
+                      value="other"
+                      checked={gender === "other"}
+                      onChange={(e) => setGender(e.target.value)}
+                    />
+                    <label
+                      className="form-check-label signup-form-check-label"
+                      htmlFor="other"
+                    >
+                      Other
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" className="btn signup-btn btn-block">
+                  Sign Up
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="form-group">
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          {...register("email", { required: true })}
-        />
-        {errors.email && <small>Email is required</small>}
-      </div>
-      <div className="form-group">
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          {...register("password", { required: true, minLength: 8 })}
-        />
-        {errors.password && (
-          <small>Password must be at least 8 characters long</small>
-        )}
-      </div>
-      <div className="form-group">
-        <label htmlFor="confirmPassword">Confirm Password</label>
-        <input
-          id="confirmPassword"
-          type="password"
-          {...register("confirmPassword", {
-            required: true,
-            validate: (value) =>
-              value === watch("password") || "Passwords do not match",
-          })}
-        />
-        {errors.confirmPassword && (
-          <small>{errors.confirmPassword.message}</small>
-        )}
-      </div>
-      <div className="form-group">
-        <label>Gender</label>
-        <select {...register("gender", { required: true })}>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="not_specified">Do not specify</option>
-        </select>
-        {errors.gender && <small>Please select your gender</small>}
-      </div>
-      <div className="form-group">
-        <button type="submit">Sign Up</button>
-      </div>
-      <div className="extra-links">
-        <Link to="/login" onClick={toggleSignUpForm}>
-          Back to Login
-        </Link>
-      </div>
-    </form>
+    </div>
   );
 }
 
-export default Signup;
+export default SignUp;

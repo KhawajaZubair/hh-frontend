@@ -73,14 +73,7 @@ function NavBar() {
             </Link>
           </Nav>
           <Nav>
-            <NavDropdown title="Join Now" id="collapsible-nav-dropdown">
-              <NavDropdown.Item onClick={() => handleLogin(1)}>
-                Doctor
-              </NavDropdown.Item>
-              <NavDropdown.Item onClick={() => handleLogin(0)}>
-                Patient
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="/login">Join Now</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
