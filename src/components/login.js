@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [status, setStatus] = useState(); // 0 for patient, 1 for doctor
+  const [status, setStatus] = useState(""); // 0 for patient, 1 for doctor
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -72,6 +72,7 @@ function Login() {
               value={status}
               onChange={(e) => setStatus(Number(e.target.value))}
             >
+              <option>Select</option>
               <option value={0}>Patient</option>
               <option value={1}>Doctor</option>
             </select>
