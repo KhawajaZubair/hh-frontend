@@ -10,6 +10,8 @@ import BlogPage from "./pages/BlogPage";
 import About from "./pages/About";
 import MedicinePage from "./pages/MedicinePage";
 import App1 from "./hospitals/App1";
+import App2 from "./doctors/App2";
+
 const router = createBrowserRouter([
   {
     path: "login",
@@ -42,6 +44,10 @@ const router = createBrowserRouter([
   {
     path: "app1",
     element: <App1 />,
+  },
+  {
+    path: "app2",
+    element: <App2 />,
   },
 ]);
 

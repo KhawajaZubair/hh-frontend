@@ -20,7 +20,7 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ms-5">
             <NavDropdown title="Doctors" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">
+              <NavDropdown.Item as={Link} to="/app2">
                 Dermatologist
               </NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">

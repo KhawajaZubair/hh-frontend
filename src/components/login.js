@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [status, setStatus] = useState(0); // 0 for patient, 1 for doctor
+  const [status, setStatus] = useState(); // 0 for patient, 1 for doctor
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
