@@ -18,7 +18,7 @@
   line-height: 1.6;
 }
 
-.btn-primary {
+.med-btn .btn-primary {
   width: 26% !important;
   padding: 10px !important;
   border: none !important;

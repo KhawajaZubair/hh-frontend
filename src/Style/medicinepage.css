@@ -1,4 +1,7 @@
-.sliderimg {
+.medpage{
+  background-color: rgb(255, 255, 255);
+}
+.medpage .sliderimg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,14 +10,14 @@
   max-width: 800px; /* Adjust the max-width as needed */
 }
 
-h3 {
+.medpage h3 {
   font-weight: bold;
 }
 
 .mb-5 {
   margin-bottom: 3rem !important;
 }
-.card{
+.medpage .card{
     border: none;
 }
 .image-slide-left .card,
@@ -26,22 +29,6 @@ h3 {
   background-color: white !important;
 }
 
-/* .search-bar {
-  margin-bottom: 20px;
-}
-
-.search-bar .form-control {
-  border-radius: 20px;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-}
-
-.search-bar .input-group-append .btn {
-  border-radius: 20px;
-  background-color: #0e97b9e5;
-  color: white;
-  border: 1px solid #0e97b9e5;
-} */
 
 @media (max-width: 768px) {
   .sliderimg {

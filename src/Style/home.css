@@ -15,7 +15,7 @@
   max-height: 70em !important;
   float: right;
 }
-.homebtn {
+.home .homebtn {
   width: 26% !important;
   padding: 10px !important;
   border: none !important;

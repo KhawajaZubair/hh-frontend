@@ -17,7 +17,7 @@ function Home() {
         <Container>
           <Row>
             <Col lg={5}>
-              <div className="p-5">
+              <div className="p-5 home">
                 <h1 className="display-6 mt-5 title">Welcome To</h1>
                 <span>
                   <h1 className="display-2 fw-bolder">Holistic Health</h1>

@@ -1,21 +1,24 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import DoctorDetail from "./DoctorDetail";
+import "../doctors/doctorpage.css";
+import profile1 from "../Assets/doccardimg/profile-4.jpg"
+import profile2 from "../Assets/doccardimg/profile-2.jpg";
 
 const doctors = [
   {
-    name: "Dr. Attia Tabassum",
+    name: "Dr. Syed Mohsin",
     specialization: "Dermatologist",
     experience: "8 Years",
-    rating: "100%",
-    image: "path/to/image1.jpg",
+    rating: "95%",
+    img: profile1,
   },
   {
-    name: "Dr. Battia Taba",
+    name: "Dr. Usman Ali",
     specialization: "Dermatologist",
     experience: "2 Years",
     rating: "58%",
-    image: "path/to/image1.jpg",
+    img: profile2,
   },
   // Add more doctors here
 ];

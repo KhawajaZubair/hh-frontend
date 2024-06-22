@@ -1,10 +1,11 @@
-/* Styling for the card collection container */
+
 .card-collection {
   padding: 50px;
+  background-color: rgb(255, 255, 255);
 }
 
 /* Styling for the heading */
-.heading {
+.card-collection .heading {
   font-size: 1.8rem;
   font-weight: bold;
   text-align: center;

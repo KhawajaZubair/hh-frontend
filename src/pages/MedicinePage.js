@@ -72,7 +72,7 @@ const MedicinePage = () => {
   );
 
   return (
-    <div>
+    <div className="medpage">
       <NavBar />
       <Container>
         <Carousel controls={false} indicators={false} className="sliderimg">
@@ -91,7 +91,7 @@ const MedicinePage = () => {
         </Carousel>
         <NavDropdown.Divider />
         <h3 className="mt-4 mb-4 text-center">Medicines</h3>
-        <InputGroup className="mb-4">
+        <InputGroup className="mb-5 mt-3">
           <FormControl
             placeholder="Search by name or formula"
             value={searchQuery}

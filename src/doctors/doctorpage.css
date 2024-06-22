@@ -1,0 +1,11 @@
+.doc-page .btn-primary {
+  background-color: #4caf4f41;
+  color: black;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 1rem;
+
+}
+.doc-page .btn-primary:hover{
+    background-color: #4caf4f41;
+}

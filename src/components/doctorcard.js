@@ -23,8 +23,8 @@ function Doctors() {
         <DoctorInfo
           img={profile1}
           name="Dr. Usman Ali"
-          title="General Surgeon"
-          stars="4.9"
+          title="Dermatologist"
+          stars="3.9"
           reviews="18"
         />
         <DoctorInfo
@@ -44,7 +44,7 @@ function Doctors() {
         <DoctorInfo
           img={profile4}
           name="Dr. Syed Mohsin"
-          title="Hematologists"
+          title="Dermatologist"
           stars="4.8"
           reviews="50"
         />

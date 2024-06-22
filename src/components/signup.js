@@ -8,7 +8,7 @@ function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const [status, setStatus] = useState(0); // 0 for patient, 1 for doctor
+  const [status, setStatus] = useState(""); // 0 for patient, 1 for doctor
   const [gender, setGender] = useState("");
   const [error, setError] = useState(null);
 
@@ -100,6 +100,7 @@ function SignUp() {
               value={status}
               onChange={(e) => setStatus(Number(e.target.value))}
             >
+              <option value="">Select</option>
               <option value={0}>Patient</option>
               <option value={1}>Doctor</option>
             </select>
@@ -107,7 +108,7 @@ function SignUp() {
           <div className="registration-form-group">
             <label>Gender:</label>
             <select value={gender} onChange={(e) => setGender(e.target.value)}>
-              {/* <option value="">Select</option> */}
+              <option value="">Select</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
               <option value="other">Other</option>
