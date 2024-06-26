@@ -19,14 +19,14 @@
 }
 
 .med-btn .btn-primary {
-  width: 26% !important;
-  padding: 10px !important;
-  border: none !important;
-  border-radius: 15px !important;
-  background-color: #4caf4f41 !important;
-  color: rgb(0 0 0) !important;
-  cursor: pointer !important;
-  position: relative !important;
+  width: 30% ;
+  padding: 10px ;
+  border: none ;
+  border-radius: 15px ;
+  background-color: #4caf4f41 ;
+  color: rgb(0 0 0) ;
+  cursor: pointer ;
+  position: relative ;
 }
 
 .btn-primary:hover {

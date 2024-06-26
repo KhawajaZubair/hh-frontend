@@ -16,7 +16,7 @@ function Footer() {
         </div>
 
         <div className="ft-list">
-          <p className="ft-list-title">Company</p>
+          <p className="ft-list-title">Website</p>
           <ul className="ft-list-items">
             <li>
               <a href="#services">Doctors</a>
@@ -67,20 +67,16 @@ function Footer() {
           <p className="ft-list-title">Talk To Us</p>
           <ul className="ft-list-items">
             <li>
-              <a href="mailto:support@healthplus.com">
+              <a href="mailto:support@holistichealth.com">
                 support@holistichealth.com
               </a>
             </li>
+
             <li>
-              <a href="mailto:appointment@healthplus.com">
-                appointment@holistichealth.com
-              </a>
+              <a href="tel:+090 078 601">+090 078 601</a>
             </li>
             <li>
-              <a href="tel:+022 5454 5252">+090078601</a>
-            </li>
-            <li>
-              <a href="tel:+022 2326 6232">+090078601</a>
+              <a href="tel:+022 2326 6232">+090 078 601</a>
             </li>
           </ul>
         </div>
@@ -92,7 +88,7 @@ function Footer() {
         <ul className="ft-social-links">
           <li>
             <a
-              href="https://linkedin.com/in/Alkaison/"
+              href="https://linkedin.com"
               title="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
@@ -126,8 +122,8 @@ function Footer() {
 
           <li>
             <a
-              href="https://x.com/Alkaison/"
-              title="Twitter"
+              href="https://x.com"
+              title="X"
               target="_blank"
               rel="noopener noreferrer"
             >

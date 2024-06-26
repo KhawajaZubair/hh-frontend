@@ -1,5 +1,7 @@
 import React from "react";
 import "../Style/medicine.css";
+import { Link } from "react-router-dom";
+
 import { Container, Row, Col, Button } from "react-bootstrap";
 import med1 from "../Assets/img/med1.png";
 import med2 from "../Assets/img/med2.png";
@@ -37,9 +39,11 @@ const Medicine = () => {
             <p className="medicine-description mb-4">
               Explore a range of high-quality medicines for your health needs.
             </p>
-            <Button variant="primary" size="lg">
-              View Medicines
-            </Button>
+            <Link to="/medicine-page">
+              <Button variant="primary" size="lg">
+                View Medicines
+              </Button>
+            </Link>
           </Col>
         </Row>
       </Container>

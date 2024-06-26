@@ -28,7 +28,7 @@ function Home() {
                   of health. Join us on a journey to better health and a happier
                   life.
                 </p>
-                <Link to="/login">
+                <Link to="/signup">
                   <Button className="homebtn">Join Now</Button>
                 </Link>
               </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import BlogInfo from "./blogInfo";
+import { Link } from "react-router-dom";
+
 import profile1 from "../Assets/blogcardimg/blog1.jpg";
 import profile2 from "../Assets/blogcardimg/blog2.jpg";
 import profile3 from "../Assets/blogcardimg/blog3.jpg";
@@ -37,9 +39,11 @@ function Blogs() {
           title="Side Effects & Different Forms Of Medicines"
         />
       </div>
-      <button className="vm-btn" type="button">
-        Read More
-      </button>
+      <Link to="/blog-page">
+        <button className="vm-btn" type="button">
+          Read More
+        </button>
+      </Link>
     </div>
   );
 }

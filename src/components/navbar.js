@@ -73,7 +73,7 @@ function NavBar() {
             </Link>
           </Nav>
           <Nav>
-            <Nav.Link href="/login">Join Now</Nav.Link>
+            <Nav.Link href="/login">Sign In</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

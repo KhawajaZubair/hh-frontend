@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../components/navbar";
 import Blogs from "../components/blogcard";
 import Footer from "../components/footer";
@@ -15,60 +15,36 @@ import MedCard from "./medicinecard";
 import med1 from "../Assets/img/med1.png";
 import med2 from "../Assets/img/med2.png";
 import med3 from "../Assets/img/med3.png";
-import med5 from "../Assets/img/med5.png";
-import med6 from "../Assets/img/med6.png";
-import med7 from "../Assets/img/med7.png";
-import med8 from "../Assets/img/med8.png";
 import Carousel from "react-bootstrap/Carousel";
 
 const MedicinePage = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const [products, setProducts] = useState([]);
 
-  const products = [
-    {
-      title: "Panadol (500mg)",
-      description: "Manufacturer: GlaxoSmithKline - Generic Name: Paracetamol",
-      formula: "Paracetamol",
-      img: med5,
-    },
-    {
-      title: "Imodium® (2mg)",
-      description: "Manufacturer: Johnson & Johnson - Generic Name: Loperamide",
-      formula: "Loperamide",
-      img: med2,
-    },
-    {
-      title: "Novidat® (500mg)",
-      description:
-        "Manufacturer: SAMI Pharmaceuticals (Prvte.) Lmtd. - Generic Name: Ciprofloxacin",
-      formula: "Ciprofloxacin",
-      img: med6,
-    },
-    {
-      title: "Risek® (20mg)",
-      description: "Manufacturer: AstraZeneca - Generic Name: Omeprazole",
-      formula: "Omeprazole",
-      img: med3,
-    },
-    {
-      title: "Rigix (10mg)",
-      description: "Manufacturer: AGP Limited - Generic Name: Cetirizine",
-      formula: "Cetirizine",
-      img: med7,
-    },
-    {
-      title: "Nims® (100mg)",
-      description: "Generic Name: Nimesulide",
-      formula: "Nimesulide",
-      img: med8,
-    },
-    // Add more products as needed
-  ];
+  useEffect(() => {
+    // Fetching data from the API
+    fetch("http://127.0.0.1:8000/api/medicines")
+      .then((response) => response.json())
+      .then((data) => {
+        // Transforming the fetched data to match the expected format
+        const transformedData = data.map((item) => ({
+          title: item.med_name,
+          description: `Formula: ${item.formula} 
+          Generic Name: ${item.generic_name}`,
+          formula: item.formula,
+          genericName: item.generic_name,
+          img: item.med_image,
+        }));
+        setProducts(transformedData);
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
 
   const filteredProducts = products.filter(
     (product) =>
       product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.formula.toLowerCase().includes(searchQuery.toLowerCase())
+      product.formula.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.genericName.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
@@ -86,14 +62,14 @@ const MedicinePage = () => {
             <img src={med3} alt="med-3" />
           </Carousel.Item>
           <Carousel.Item>
-            <img src={med5} alt="med-5" />
+            <img src={med1} alt="med-5" />
           </Carousel.Item>
         </Carousel>
         <NavDropdown.Divider />
         <h3 className="mt-4 mb-4 text-center">Medicines</h3>
         <InputGroup className="mb-5 mt-3">
           <FormControl
-            placeholder="Search by name or formula"
+            placeholder="Search by name, generic name, or formula"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
