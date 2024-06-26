@@ -17,6 +17,7 @@ import med2 from "../Assets/img/med2.png";
 import med3 from "../Assets/img/med3.png";
 import Carousel from "react-bootstrap/Carousel";
 
+
 const MedicinePage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState([]);
