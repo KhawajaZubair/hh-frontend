@@ -2,12 +2,15 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
 import logo from "../Assets/logos/hh3.png";
+import { useAuth } from "../context/AuthContext";
 
 function NavBar() {
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
-  const handleLogin = (status) => {
-    navigate("/login", { state: { status } });
+  const handleLogout = () => {
+    logout();
+    navigate("/");
   };
 
   return (
@@ -73,7 +76,14 @@ function NavBar() {
             </Link>
           </Nav>
           <Nav>
-            <Nav.Link href="/login">Sign In</Nav.Link>
+            {user ? (
+              <>
+                <Nav.Link> {user.name}</Nav.Link>
+                <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
+              </>
+            ) : (
+              <Nav.Link href="/login">Sign In</Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

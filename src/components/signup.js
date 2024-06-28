@@ -11,6 +11,8 @@ function SignUp() {
   const [status, setStatus] = useState(""); // 0 for patient, 1 for doctor
   const [gender, setGender] = useState("");
   const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+  const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -36,13 +38,16 @@ function SignUp() {
         }),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        const data = await response.json();
         setError(data.errors || "Something went wrong!");
       } else {
-        const data = await response.json();
         console.log("User registered:", data.user);
-        // Optionally, you can clear the form here or redirect the user to a different page
+        setSuccess("Registration successful! Redirecting to login page...");
+        setTimeout(() => {
+          navigate("/login");
+        }, 3000); // Redirect after 3 seconds
       }
     } catch (err) {
       setError("Network error: " + err.message);
@@ -120,6 +125,7 @@ function SignUp() {
           </div>
         </form>
         {error && <div className="alert alert-danger">{error}</div>}
+        {success && <div className="alert alert-success">{success}</div>}
       </div>
     </div>
   );

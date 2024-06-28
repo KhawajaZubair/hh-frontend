@@ -1,8 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import "../Style/medicinepage.css";
+import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
 
-const MedCard = ({ title, formula, description, img }) => {
+const MedCard = ({ id, title, formula, description, img }) => {
   return (
     <Card className="med-card" style={{ width: "18rem" }}>
       <Card.Img variant="top" src={img} />
@@ -10,7 +12,9 @@ const MedCard = ({ title, formula, description, img }) => {
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <Card.Text>{formula}</Card.Text>
-        <Button className="med-button">Info</Button>
+        <Link to={`/medicine/${id}`} className="view-links">
+          View More
+        </Link>
       </Card.Body>
     </Card>
   );

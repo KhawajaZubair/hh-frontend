@@ -86,6 +86,7 @@ const MedicinePage = () => {
 
         // Transforming the fetched data to match the expected format
         const transformedData = data.map((item) => ({
+          id: item.id,
           title: item.med_name,
           formula: `Formula: ${item.formula}`,
           description: `Generic Name: ${item.generic_name}`,

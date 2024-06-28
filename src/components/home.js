@@ -1,3 +1,4 @@
+// src/components/Home.js
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
@@ -9,8 +10,11 @@ import Slider from "./slider";
 import Doctors from "./doctorcard";
 import Blogs from "./blogcard";
 import Services from "./services";
+import { useAuth } from "../context/AuthContext";
 
 function Home() {
+  const { user } = useAuth();
+
   return (
     <>
       <div className="home">
@@ -28,9 +32,11 @@ function Home() {
                   of health. Join us on a journey to better health and a happier
                   life.
                 </p>
-                <Link to="/signup">
-                  <Button className="homebtn">Join Now</Button>
-                </Link>
+                {!user && (
+                  <Link to="/signup">
+                    <Button className="homebtn">Join Now</Button>
+                  </Link>
+                )}
               </div>
             </Col>
             <Col lg={7}>

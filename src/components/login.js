@@ -1,7 +1,9 @@
+// src/components/Login.js
 import "../Style/login.css";
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -9,6 +11,7 @@ function Login() {
   const [status, setStatus] = useState(""); // 0 for patient, 1 for doctor
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -33,6 +36,7 @@ function Login() {
       } else {
         console.log("User logged in:", data.user);
         localStorage.setItem("token", data.token); // Store the token in localStorage
+        login(data.user); // Update the global authentication state
         navigate("/app");
       }
     } catch (err) {
