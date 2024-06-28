@@ -14,6 +14,7 @@ import App1 from "./hospitals/App1";
 import App2 from "./doctors/App2";
 import MedicineDetail from "./pages/MedicineDetail";
 import { AuthProvider } from "./context/AuthContext";
+import BlogDetail from "./pages/BlogDetail";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: "medicine/:id",
     element: <MedicineDetail />,
+  },
+  {
+    path: "blog/:id",
+    element: <BlogDetail />,
   },
 ]);
 

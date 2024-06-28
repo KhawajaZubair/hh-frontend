@@ -1,5 +1,6 @@
-// src/pages/MedicineDetail.js
 import React, { useEffect, useState } from "react";
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
 import { useParams } from "react-router-dom";
 import Panadol from "../Assets/medicine-page-img/Panadol.png";
 import Tylenol from "../Assets/medicine-page-img/Tylenol.png";
@@ -79,60 +80,65 @@ const MedicineDetail = () => {
   const imageSrc = imageMap[imageName] || "default-image-path"; // Use a default image path if not found
 
   return (
-    <div className="container medicine-detail-container">
-      <div className="medicine-detail">
-        <h1 className="my-4">{medicine.med_name}</h1>
-        <img src={imageSrc} alt={medicine.med_name} className="img-fluid" />
-        <p>
-          <strong>Formula:</strong> {medicine.formula}
-        </p>
-        <p>
-          <strong>Generic Name:</strong> {medicine.generic_name}
-        </p>
-        <p>
-          <strong>Description:</strong> {medicine.description}
-        </p>
-        <p>
-          <strong>Ingredients:</strong> {medicine.ingredients}
-        </p>
-        <p>
-          <strong>Drug Class:</strong> {medicine.drug_class}
-        </p>
-        <p>
-          <strong>Dosage Form:</strong> {medicine.dosage_form}
-        </p>
-        <p>
-          <strong>Uses:</strong> {medicine.uses}
-        </p>
-        <p>
-          <strong>Dosage:</strong> {medicine.dosage}
-        </p>
-        <p>
-          <strong>Overdose:</strong> {medicine.overdose}
-        </p>
-        <p>
-          <strong>Missed Dose:</strong> {medicine.missed_dose}
-        </p>
-        <p>
-          <strong>How to Use:</strong> {medicine.how_to_use}
-        </p>
-        <p>
-          <strong>When Not to Use:</strong> {medicine.when_not_to_use}
-        </p>
-        <p>
-          <strong>Side Effects:</strong> {medicine.side_effects}
-        </p>
-        <p>
-          <strong>Precautions & Warnings:</strong>{" "}
-          {medicine.precautions_warnings}
-        </p>
-        <p>
-          <strong>Drug Interactions:</strong> {medicine.drug_interactions}
-        </p>
-        <p>
-          <strong>Storage & Disposal:</strong> {medicine.storage_disposal}
-        </p>
+    <div>
+      <NavBar />
+
+      <div className="container medicine-detail-container">
+        <div className="medicine-detail">
+          <h1 className="my-4">{medicine.med_name}</h1>
+          <img src={imageSrc} alt={medicine.med_name} className="img-fluid" />
+          <p>
+            <strong>Formula:</strong> {medicine.formula}
+          </p>
+          <p>
+            <strong>Generic Name:</strong> {medicine.generic_name}
+          </p>
+          <p>
+            <strong>Description:</strong> {medicine.description}
+          </p>
+          <p>
+            <strong>Ingredients:</strong> {medicine.ingredients}
+          </p>
+          <p>
+            <strong>Drug Class:</strong> {medicine.drug_class}
+          </p>
+          <p>
+            <strong>Dosage Form:</strong> {medicine.dosage_form}
+          </p>
+          <p>
+            <strong>Uses:</strong> {medicine.uses}
+          </p>
+          <p>
+            <strong>Dosage:</strong> {medicine.dosage}
+          </p>
+          <p>
+            <strong>Overdose:</strong> {medicine.overdose}
+          </p>
+          <p>
+            <strong>Missed Dose:</strong> {medicine.missed_dose}
+          </p>
+          <p>
+            <strong>How to Use:</strong> {medicine.how_to_use}
+          </p>
+          <p>
+            <strong>When Not to Use:</strong> {medicine.when_not_to_use}
+          </p>
+          <p>
+            <strong>Side Effects:</strong> {medicine.side_effects}
+          </p>
+          <p>
+            <strong>Precautions & Warnings:</strong>{" "}
+            {medicine.precautions_warnings}
+          </p>
+          <p>
+            <strong>Drug Interactions:</strong> {medicine.drug_interactions}
+          </p>
+          <p>
+            <strong>Storage & Disposal:</strong> {medicine.storage_disposal}
+          </p>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

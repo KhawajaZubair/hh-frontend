@@ -45,7 +45,7 @@ const BlogPage = () => {
               <h2 className="blog-title">{post.title}</h2>
               <div className="blog-meta">
                 <span className="date">{post.upload_at}</span>
-                <Link to={`/blog/${index}`} className="read-more">
+                <Link to={`/blog/${post.id}`} className="read-more">
                   Read more
                 </Link>
               </div>
