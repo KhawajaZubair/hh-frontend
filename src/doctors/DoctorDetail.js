@@ -1,5 +1,7 @@
 import React from "react";
-import { Col, Card, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Col, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../doctors/doctorpage.css";
 const DoctorDetail = ({ doctor }) => {
   return (
@@ -13,8 +15,12 @@ const DoctorDetail = ({ doctor }) => {
             Experience: {doctor.experience} <br />
             Rating: {doctor.rating}
           </Card.Text>
-          <Button variant="primary">View Profile</Button>
-          <Button variant="primary">Book Appointment</Button>
+          <Link to={``} className="doc-links">
+            View Profile
+          </Link>
+          <Link to={``} className="doc-links">
+            Book Appointment
+          </Link>
         </Card.Body>
       </Card>
     </Col>
