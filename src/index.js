@@ -15,7 +15,7 @@ import MedicineDetail from "./pages/MedicineDetail";
 import { AuthProvider } from "./context/AuthContext";
 import BlogDetail from "./pages/BlogDetail";
 import Dermatologists from "./doctors/Dermatologists";
-import Neurologists from "./doctors/Neurologists";
+import Nephrologist from "./doctors/Nephrologist";
 import Gastroenterologists from "./doctors/Gastroenterologists";
 import AllDoctors from "./doctors/AllDoctors";
 
@@ -61,12 +61,12 @@ const router = createBrowserRouter([
     element: <BlogDetail />,
   },
   {
-      path: "dermatologists",
+    path: "dermatologists",
     element: <Dermatologists />, // Corrected path
   },
   {
-    path: "neurologists",
-    element: <Neurologists />, // Corrected path
+    path: "nephrologist",
+    element: <Nephrologist />, // Corrected path
   },
   {
     path: "gastroenterologists",
@@ -76,7 +76,6 @@ const router = createBrowserRouter([
     path: "all-doctors",
     element: <AllDoctors />, // Corrected path
   },
-
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

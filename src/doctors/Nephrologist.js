@@ -5,20 +5,24 @@ import { getDoctorsBySpecialization } from "../services/doctorService";
 import "./doctorpage.css";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
-import Gastro01 from "../Assets/doctors/Gastro01.webp";
-import Gastro02 from "../Assets/doctors/Gastro02.jpeg";
+import Nephro01 from "../Assets/doctors/Nephro01.webp";
+import Nephro02 from "../Assets/doctors/Nephro02.webp";
+import Nephro03 from "../Assets/doctors/Nephro03.webp";
+import Nephro04 from "../Assets/doctors/Nephro04.webp";
 
 const imageMap = {
-  "Assist. Prof. Dr. Fahmina Ashfaq": Gastro01,
-  "Dr. Syed Sibtain Ul Hassan": Gastro02,
+  "Assoc. Prof. Dr. Fowad Shahzad Warraich": Nephro01,
+  "Dr. Hameed Tajammal Khan": Nephro02,
+  "Dr. Muhammad Aamir": Nephro03,
+  "Dr. Azhar Nasim": Nephro04,
 };
 
-const Gastroenterologists = () => {
+const Nephrologist = () => {
   const [doctors, setDoctors] = useState([]);
 
   useEffect(() => {
     const fetchDoctors = async () => {
-      const data = await getDoctorsBySpecialization("Gastroenterologist");
+      const data = await getDoctorsBySpecialization("Nephrologist");
       setDoctors(data);
     };
     fetchDoctors();
@@ -28,13 +32,13 @@ const Gastroenterologists = () => {
     <div>
       <NavBar />
       <Container>
-        <h2 className="my-4">Top Gastroenterologists In Lahore</h2>
+        <h2 className="my-4">Top Nephrologists In Lahore</h2>
         <Row>
           {doctors.map((doctor, index) => (
             <DoctorDetail
               key={index}
               doctor={doctor}
-              image={imageMap[doctor.name] || "default-image-path"} // Provide a default image path if needed
+              image={imageMap[doctor.name] || "default-image-path"} 
             />
           ))}
         </Row>
@@ -44,4 +48,4 @@ const Gastroenterologists = () => {
   );
 };
 
-export default Gastroenterologists;
+export default Nephrologist;

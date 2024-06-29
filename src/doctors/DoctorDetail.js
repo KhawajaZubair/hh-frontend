@@ -3,17 +3,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../doctors/doctorpage.css";
-const DoctorDetail = ({ doctor }) => {
+
+const DoctorDetail = ({ doctor, image }) => {
   return (
     <Col md={4} className="mb-4 doc-page">
       <Card>
-        <Card.Img variant="top" src={doctor.img} />
+        <Card.Img variant="top" src={image} />
         <Card.Body>
           <Card.Title>{doctor.name}</Card.Title>
           <Card.Text>
-            {doctor.specialization} <br />
-            Experience: {doctor.experience} <br />
-            Rating: {doctor.rating}
+            {doctor.specializations} <br />
+            Experience: {doctor.experiences} <br />
+            Rating: 95%
           </Card.Text>
           <Link to={``} className="doc-links">
             View Profile

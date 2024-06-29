@@ -26,8 +26,8 @@ function NavBar() {
               <NavDropdown.Item as={Link} to="/dermatologists">
                 Dermatologist
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/neurologists">
-                Neurologist
+              <NavDropdown.Item as={Link} to="/nephrologist">
+                Nephrologist
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/gastroenterologists">
                 Gastroenterologist
