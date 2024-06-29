@@ -11,10 +11,13 @@ import BlogPage from "./pages/BlogPage";
 import About from "./pages/About";
 import MedicinePage from "./pages/MedicinePage";
 import App1 from "./hospitals/App1";
-import App2 from "./doctors/App2";
 import MedicineDetail from "./pages/MedicineDetail";
 import { AuthProvider } from "./context/AuthContext";
 import BlogDetail from "./pages/BlogDetail";
+import Dermatologists from "./doctors/Dermatologists";
+import Neurologists from "./doctors/Neurologists";
+import Gastroenterologists from "./doctors/Gastroenterologists";
+import AllDoctors from "./doctors/AllDoctors";
 
 const router = createBrowserRouter([
   {
@@ -50,10 +53,6 @@ const router = createBrowserRouter([
     element: <App1 />,
   },
   {
-    path: "app2",
-    element: <App2 />,
-  },
-  {
     path: "medicine/:id",
     element: <MedicineDetail />,
   },
@@ -61,6 +60,23 @@ const router = createBrowserRouter([
     path: "blog/:id",
     element: <BlogDetail />,
   },
+  {
+      path: "dermatologists",
+    element: <Dermatologists />, // Corrected path
+  },
+  {
+    path: "neurologists",
+    element: <Neurologists />, // Corrected path
+  },
+  {
+    path: "gastroenterologists",
+    element: <Gastroenterologists />, // Corrected path
+  },
+  {
+    path: "all-doctors",
+    element: <AllDoctors />, // Corrected path
+  },
+
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

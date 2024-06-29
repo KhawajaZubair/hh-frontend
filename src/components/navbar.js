@@ -23,18 +23,18 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ms-5">
             <NavDropdown title="Doctors" id="collapsible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/app2">
+              <NavDropdown.Item as={Link} to="/dermatologists">
                 Dermatologist
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item as={Link} to="/neurologists">
                 Neurologist
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
+              <NavDropdown.Item as={Link} to="/gastroenterologists">
                 Gastroenterologist
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Doctors in Lahore
+              <NavDropdown.Item as={Link} to="/all-doctors">
+                All Doctors
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/medicine-page">Medicines</Nav.Link>
