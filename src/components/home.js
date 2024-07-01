@@ -1,4 +1,3 @@
-// src/components/Home.js
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";

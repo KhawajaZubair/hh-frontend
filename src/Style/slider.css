@@ -1,5 +1,5 @@
 .slider {
-  height: 400px; /* Increased height for larger images */
+  height: 400px; 
   position: relative;
   overflow: hidden;
   background-color: rgb(255, 255, 255);
@@ -7,7 +7,7 @@
 
 .slider .slider-img {
   display: flex;
-  width: fit-content; /* Adjust as needed based on image size */
+  width: fit-content; 
   animation: scroll 40s linear infinite;
 }
 
@@ -21,9 +21,9 @@
 }
 
 .slide {
-  width: 350px; /* Increased width for larger images */
-  height: 350px; /* Increased height for larger images */
-  margin-right: 20px; /* Adjust spacing between slides */
+  width: 350px; 
+  height: 350px; 
+  margin-right: 20px; 
   transition: transform 0.3s ease;
 }
 
@@ -35,17 +35,16 @@
 }
 
 .slide:hover {
-  transform: scale(1.05); /* Increase size on hover */
+  transform: scale(1.05); 
 }
 
-/* Optional: Add gradient overlays */
 .slider::before,
 .slider::after {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 80px; /* Adjust the gradient width */
+  width: 80px;
   z-index: 1;
 }
 

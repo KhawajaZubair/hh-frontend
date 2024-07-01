@@ -67,13 +67,13 @@ function CardCollection() {
       icon: faHospital,
       title: "Find Hospital",
       text: "Find nearby hospitals and healthcare centers",
-      linkTo: "hospital-page",
+      linkTo: "all-hospitals",
     },
     {
       icon: faUserMd,
       title: "Find Doctor",
       text: "Search for doctors and healthcare professionals",
-      linkTo: "doctor-page",
+      linkTo: "all-doctors",
     },
     {
       icon: faPills,
@@ -91,7 +91,7 @@ function CardCollection() {
       icon: faFlask,
       title: "Lab-Test",
       text: "Schedule and view lab tests and results",
-      linkTo: "Lab",
+      linkTo: "https://chughtailab.com/home-sampling/",
     },
     {
       icon: faBlog,
