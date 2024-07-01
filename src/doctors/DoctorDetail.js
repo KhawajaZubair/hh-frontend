@@ -6,20 +6,22 @@ import "../doctors/doctorpage.css";
 
 const DoctorDetail = ({ doctor, image }) => {
   return (
-    <Col md={4} className="mb-4 doc-page">
+    <Col md={4} className="mb-4 doctor-detail-card">
       <Card>
-        <Card.Img variant="top" src={image} />
+        <Card.Img className="doc-card-img" variant="top" src={image} />
         <Card.Body>
           <Card.Title>{doctor.name}</Card.Title>
           <Card.Text>
-            {doctor.specializations} <br />
-            Experience: {doctor.experiences} <br />
+            {doctor.specializations}
+            <br />
+            Experience: {doctor.experiences} years
+            <br />
             Rating: 95%
           </Card.Text>
-          <Link to={``} className="doc-links">
+          <Link to={`/doctors/${doctor.id}`} className="doc-links">
             View Profile
           </Link>
-          <Link to={``} className="doc-links">
+          <Link to={`/doctors/${doctor.id}/book`} className="doc-links">
             Book Appointment
           </Link>
         </Card.Body>
@@ -27,5 +29,6 @@ const DoctorDetail = ({ doctor, image }) => {
     </Col>
   );
 };
+
 
 export default DoctorDetail;

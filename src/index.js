@@ -18,6 +18,7 @@ import Dermatologists from "./doctors/Dermatologists";
 import Nephrologist from "./doctors/Nephrologist";
 import Gastroenterologists from "./doctors/Gastroenterologists";
 import AllDoctors from "./doctors/AllDoctors";
+import DoctorProfile from "./doctors/DoctorProfile";
 
 const router = createBrowserRouter([
   {
@@ -62,19 +63,23 @@ const router = createBrowserRouter([
   },
   {
     path: "dermatologists",
-    element: <Dermatologists />, // Corrected path
+    element: <Dermatologists />,
   },
   {
     path: "nephrologist",
-    element: <Nephrologist />, // Corrected path
+    element: <Nephrologist />,
   },
   {
     path: "gastroenterologists",
-    element: <Gastroenterologists />, // Corrected path
+    element: <Gastroenterologists />,
   },
   {
     path: "all-doctors",
-    element: <AllDoctors />, // Corrected path
+    element: <AllDoctors />,
+  },
+  {
+    path: "doctors/:id",
+    element: <DoctorProfile />,
   },
 ]);
 

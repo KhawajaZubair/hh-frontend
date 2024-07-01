@@ -1,6 +1,6 @@
  .doc-links {
-  margin-left: 10px;
-  text-align: center;
+  /* margin-left: 10px; */
+  /* text-align: center; */
   margin-top: 20px;
   color: #45a049;
   text-decoration: none;
@@ -8,5 +8,27 @@
 }
 .doc-links:hover {
   color: #7ced829d;
+}
+.doctor-detail-card .doc-card-img{
+      border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+     width: 100%; 
+}
+.card-img-top {
+  height: 400px;  /* Fixed height for all images */
+  width: 100%;    /* Full width of the card */
+  object-fit: cover; /* Cover ensures the image covers the entire area, cropping excess parts without distortion */
+}
+.doctor-detail-card .card {
+  display: flex;
+  flex-direction: column; /* Organizes content in a vertical stack */
+  height: 100%; /* Ensures card takes full height */
+}
+
+.doctor-detail-card .card-body {
+  flex-grow: 1; /* Allows the card body to expand to use any available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures buttons and text are spaced evenly */
 }
 
