@@ -5,7 +5,7 @@ import {
   faIdCardAlt,
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../Style/appointment.css";
 import docimg from "../Assets/img/AppDoc.png";
 
@@ -42,14 +42,15 @@ function Appointment() {
           <FontAwesomeIcon icon={faClock} style={{ color: "#0097B2" }} />
           <span>Make a Scheduled Appointment in Just a Few Seconds</span>
         </div>
-
-        <button
-          className="ba-appointment-btn"
-          type="button"
-          onClick={handleBookAppointmentClick}
-        >
-          Book Now
-        </button>
+        <Link to="all-doctors">
+          <button
+            className="ba-appointment-btn"
+            type="button"
+            onClick={handleBookAppointmentClick}
+          >
+            Book Now
+          </button>
+        </Link>
       </div>
     </div>
   );

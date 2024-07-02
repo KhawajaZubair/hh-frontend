@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Nephro01 from "../../Assets/doctors/Nephro01.webp";
-import Nephro02 from "../../Assets/doctors/Nephro02.webp";
-import Derma01 from "../../Assets/doctors/Derma01.webp";
-import Derma02 from "../../Assets/doctors/Derma02.webp";
+import Nephro03 from "../../Assets/doctors/Nephro03.webp";
+import Nephro04 from "../../Assets/doctors/Nephro04.webp";
 
 // Image map for specific doctors
 const imageMap = {
-  "Assoc. Prof. Dr. Fowad Shahzad Warraich": Nephro01,
-  "Dr. Hameed Tajammal Khan": Nephro02,
-  "Dr. Sippy Iqbal": Derma01,
-  "Dr. Quratul Ain Sajida": Derma02,
+  "Dr. Muhammad Aamir": Nephro03,
+  "Dr. Azhar Nasim": Nephro04,
 };
 
 function DoctorList() {
@@ -29,14 +25,9 @@ function DoctorList() {
         }
         const data = await response.json();
         console.log("Fetched data:", data); // Debug log
-        // Filter doctors by name
-        const filteredDoctors = data.filter((doctor) =>
-          [
-            "Assoc. Prof. Dr. Fowad Shahzad Warraich",
-            "Dr. Hameed Tajammal Khan",
-            "Dr. Sippy Iqbal",
-            "Dr. Quratul Ain Sajida",
-          ].includes(doctor.name)
+        // Filter doctors by hospital
+        const filteredDoctors = data.filter(
+          (doctor) => doctor.hospital_address === "Shalamar Hospital"
         );
         console.log("Filtered doctors:", filteredDoctors); // Debug log
         setDoctors(filteredDoctors);
@@ -87,7 +78,7 @@ function DoctorList() {
                   <div className="d-flex flex-column">
                     <Link
                       to={`/doctors/${doctor.id}`}
-                      className="doc-links"
+                      className="doc-links mb-2"
                     >
                       View Profile
                     </Link>
@@ -103,7 +94,7 @@ function DoctorList() {
             </div>
           ))
         ) : (
-          <div>No doctors found from Doctors Hospital.</div>
+          <div>No doctors found from Shalamar Hospital.</div>
         )}
       </div>
     </div>

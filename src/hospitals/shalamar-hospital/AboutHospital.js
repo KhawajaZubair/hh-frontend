@@ -1,128 +1,64 @@
 import React from "react";
-import "../doctor-hospital/hospital.css";
+import "../shalamar-hospital/hospital.css";
 
 function AboutHospital() {
   return (
     <div className="about-hospital mt-5">
-      <h2>About Doctors Hospital</h2>
+      <h2>About Shalamar Hospital</h2>
+      <h3>Shalamar Hospital</h3>
       <p>
-        Doctors Hospital Lahore is one of the best state-of-the-art hospitals of
-        Punjab. It is a huge six-story building that was established in 2000.
+        Shalamar Hospital was started in 1978 as a small 50-bed hospital that
+        had just six outpatient departments. Over the last 40 years, the
+        hospital has grown to ten times its size now holding 500 beds and 25
+        different departments. The hospital also functions as a training center
+        for young medical students and conducts an extensive amount of research
+        into emerging fields of medicine. It is currently functioning as a
+        non-profit hospital that is operating mainly on donations from the
+        government and grants from private organisations.
       </p>
+      <h3>Appointment details</h3>
       <p>
-        Doctors Hospital is PMC certified 250-bedded private tertiary care
-        hospital, that offers a wide range of medical services. It has a team of
-        professional doctors, with over 100 consultants and 650 highly trained
-        medical staff. In past 23 years, Doctors Hospital Lahore has treated
-        over 2 million people from all over Pakistan.
+        To Book, an appointment with any of the doctors at Shalamar Hospital,
+        Lahore, call on 042-38900939 or click the “Book Appointment” button.
       </p>
+      <h3>Facilities</h3>
       <p>
-        The hospital consists of private rooms, spacious waiting lounges,
-        air-conditioned patient rooms, and luxurious lobbies. The patient rooms
-        consist of the latest comfortable patient beds, TV-sets, room fridges,
-        couches, and fully cleaned bathrooms. Doctor Hospital Lahore has high
-        hygiene standards and, therefore, a high patient satisfaction rate.
+        The hospital started its dialysis center in 2003 and has since used to
+        treat a very large number of patients, many of whom did not have to pay
+        the hospital at all due to their financial status. The hospital also
+        runs a special one-stop breast clinic that quickly and efficiently
+        checks thousands of women for breast-related illnesses every month. They
+        run these checks as non-invasively as possible so that there is minimal
+        discomfort for the patients.
       </p>
-      <h3>Doctors Hospital Doctors List</h3>
+
+      <h3>Specialties</h3>
       <p>
-        Doctors Hospital Lahore has a panel of more than 120 national and
-        international certified doctors. You can find doctors hospital lahore
-        doctors list above. All Doctors Hospital doctors are offering a wide
-        array of treatments and preventive services to patients from all over
-        Punjab.
+        The dermatology department at Shalimar Hospital has been running for the
+        last 30 years and has been steadily expanding since its inception. The
+        department offers a broad range of treatments including phototherapy,
+        cryotherapy, and cauterization services. The urology department was
+        started at around the same time and has also developed considerably
+        since then, they now use non-invasive procedures to treat complicated
+        prostate and urological problems. They even offer laser treatments and
+        kidney removal procedures for more extreme cases.
       </p>
-      <h3>Doctor Hospital Departments</h3>
+
+      <h3>Timings</h3>
       <p>
-        Doctors Hospital medical team is providing medical services in more than
-        30 specialties. Some of the best-reviewed revisited departments are:
+        Shalamar Hospital is open 24/7 although doctors do have particular
+        timings for consultations and appointments.
       </p>
-      <ul>
-        <li>Cardiac Surgery</li>
-        <li>Paediatrics</li>
-        <li>Oncology</li>
-        <li>Clinical Nutrition</li>
-        <li>Psychiatry</li>
-        <li>Cardiology</li>
-        <li>Diabetes and Endocrinology</li>
-        <li>Pulmonology</li>
-        <li>ENT (Ear Throat & Nose)</li>
-        <li>Haematology</li>
-        <li>Nuclear Medicine</li>
-        <li>Radiology</li>
-        <li>Neurology</li>
-        <li>Gynaecology and Obstetrics</li>
-        <li>Ophthalmology</li>
-        <li>Urology</li>
-        <li>Dentistry</li>
-        <li>Microbiology</li>
-        <li>Cancer Center</li>
-        <li>Vascular Surgery</li>
-        <li>Orthopaedic Surgery</li>
-      </ul>
-      <h3>Services and Treatment in Doctors Hospital</h3>
+
+      <h3>Lab Details</h3>
       <p>
-        Doctors Hospital Lahore is fully equipped to provide 24 hr emergency,
-        digital imaging with nuclear medicine. Doctor Hospital has 12
-        state-of-the-art operating rooms, daycare services, inclusive orthopedic
-        services, a fully equipped 16-unit dialysis center, coronary
-        angiography/angioplasty, and stent placement.
-      </p>
-      <h3>Cancer Center</h3>
-      <p>
-        The cancer center has 14 separate infusion suites, particularly for
-        chemotherapy. The cancer center is operational 24/7 and provides
-        services of cancer screening, biological therapy, immunotherapy,
-        chemotherapy, and pre and post-cancer counseling.
-      </p>
-      <h3>Biliary and Liver Transplant Surgery Services</h3>
-      <p>
-        The liver transplant department of the Doctors Hospital offers advanced
-        technology used for liver transplants. The anesthesia also manages the
-        hemodynamic changes that occur during the surgery to ensure the safety
-        of the patients.
-      </p>
-      <h3>Diagnostic Services</h3>
-      <p>
-        All kinds of diagnostic tests are done at Doctors Hospital Lahore.
-        Please see the list below, to book your test appointments.
-      </p>
-      <h3>Dialysis Center</h3>
-      <p>
-        There are 16 dialysis machines for kidney dialysis. They also offer a
-        full range of treatments for renal diseases for both inpatients and
-        outpatients. All nephrology clinics are operational throughout the week
-        and emergency kidney care is available 24/7.
-      </p>
-      <h3>Emergency Care Services</h3>
-      <p>
-        Doctors Hospital Lahore offers emergency services for medical
-        emergencies like heart attacks, brain strokes, fractures, injuries,
-        cuts, etc. Ambulances are support staff are also available for emergency
-        transport.
-      </p>
-      <h3>Orthopedic Services</h3>
-      <p>
-        Doctors Hospital is also best known for experienced orthopedic surgeons
-        and physicians. Orthopedic patients are also treated for trauma,
-        oncology, and joint problems.
-      </p>
-      <p>
-        Doctor Hospital Lahore also has spacious valet parking. Rolling beds,
-        wheelchairs and supporting staff are also always available in case of
-        emergencies. You will also find a fully operational cafeteria for staff
-        and patients.
-      </p>
-      <h3>Doctors Hospital Diagnostic Laboratory Services</h3>
-      <p>
-        The pathology and laboratory department of Doctors Hospital Lahore is
-        among the best and most reliable laboratory services in the private
-        sector. They also have test reports available online.
-      </p>
-      <h3>Doctors Hospital Lahore Pharmacy</h3>
-      <p>
-        Doctors Hospital in Lahore also has its own pharmacy that is operational
-        24/7. It is located near the emergency ward for the patients'
-        convenience.
+        The Shalamar Hospital Laboratory has been accredited by the Pakistan
+        National Accreditation Council. Their pathology department has an
+        auto-analyzer so samples are quickly and accurately processed, in fact,
+        the chemical pathology department conducts a whopping 1200 tests every
+        day. The radiology department has access to some state of the art
+        imaging technology and conducts over 80,000 scans a year. They provide
+        vascular ultrasounds, CT Scans, MRIs and Fluoroscopies.
       </p>
     </div>
   );

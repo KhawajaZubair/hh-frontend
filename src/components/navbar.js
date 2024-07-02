@@ -44,7 +44,7 @@ function NavBar() {
               <NavDropdown.Item as={Link} to="/app1">
                 Doctors Hospital
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item as={Link} to="/shalamar">
                 Shalamar Hospital
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/omar">

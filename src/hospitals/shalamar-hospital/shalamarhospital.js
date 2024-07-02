@@ -1,14 +1,14 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../doctor-hospital/hospital.css";
-import HospitalDetails from "../doctor-hospital/HospitalDetails";
-import DoctorList from "../doctor-hospital/DoctorList";
-import Services from "../doctor-hospital/Services";
-import AboutHospital from "../doctor-hospital/AboutHospital";
+import "../shalamar-hospital/hospital.css"; 
+import HospitalDetails from "./HospitalDetails";
+import DoctorList from "./DoctorList";
+import Services from "./Services";
+import AboutHospital from "./AboutHospital";
 import NavBar from "../../components/navbar";
 import Footer from "../../components/footer";
 
-function App1() {
+function Shalamar() {
   return (
     <>
       <NavBar />
@@ -23,4 +23,4 @@ function App1() {
   );
 }
 
-export default App1;
+export default Shalamar;
