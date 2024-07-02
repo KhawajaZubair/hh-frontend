@@ -20,6 +20,7 @@ import AllDoctors from "./doctors/AllDoctors";
 import DoctorProfile from "./doctors/DoctorProfile";
 import Omar from "./hospitals/omar-hospital/omarhospital";
 import Shalamar from "./hospitals/shalamar-hospital/shalamarhospital";
+import Hospitals from "./hospitals/all-hospitals/Hospitals";
 
 const router = createBrowserRouter([
   {
@@ -89,6 +90,10 @@ const router = createBrowserRouter([
   {
     path: "shalamar",
     element: <Shalamar />,
+  },
+  {
+    path: "all-hospitals",
+    element: <Hospitals />,
   },
 ]);
 

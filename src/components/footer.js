@@ -25,7 +25,7 @@ function Footer() {
               <Link to={"/medicine-page"}>Medicines</Link>
             </li>
             <li>
-              <Link to={"/legal"}>Hospitals</Link>
+              <Link to={"/all-hospitals"}>Hospitals</Link>
             </li>
             <li>
               <Link to={"https://chughtailab.com/home-sampling/"}>

@@ -51,6 +51,7 @@
   padding: 10px 20px;
   font-size: 1rem;
   transition: background-color 0.3s;
+  margin: 10px;
 }
 
 .hospital-details .btn-success:hover {
@@ -120,7 +121,7 @@
 }
 
 .card-body .btn-primary {
-   width: 35%;
+  width: 35%;
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -145,7 +146,8 @@
   margin-bottom: 40px;
 }
 
-.about-hospital h2, .about-hospital h3 {
+.about-hospital h2,
+.about-hospital h3 {
   color: #333;
   margin-bottom: 20px;
 }
@@ -166,4 +168,3 @@
   color: #666;
   line-height: 1.6;
 }
-

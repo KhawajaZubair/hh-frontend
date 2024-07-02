@@ -51,7 +51,7 @@ function NavBar() {
                 Omar Hospital
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item as={Link} to="/all-hospitals">
                 Hospitals in Lahore
               </NavDropdown.Item>
             </NavDropdown>
