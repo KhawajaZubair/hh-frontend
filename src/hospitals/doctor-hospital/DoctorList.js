@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Nephro01 from "../Assets/doctors/Nephro01.webp";
-import Nephro02 from "../Assets/doctors/Nephro02.webp";
-import Derma01 from "../Assets/doctors/Derma01.webp";
-import Derma02 from "../Assets/doctors/Derma02.webp";
+import Nephro01 from "../../Assets/doctors/Nephro01.webp";
+import Nephro02 from "../../Assets/doctors/Nephro02.webp";
+import Derma01 from "../../Assets/doctors/Derma01.webp";
+import Derma02 from "../../Assets/doctors/Derma02.webp";
 
 // Image map for specific doctors
 const imageMap = {

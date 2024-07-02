@@ -1,4 +1,3 @@
-// src/index.js
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -10,7 +9,7 @@ import Signup from "./components/signup";
 import BlogPage from "./pages/BlogPage";
 import About from "./pages/About";
 import MedicinePage from "./pages/MedicinePage";
-import App1 from "./hospitals/App1";
+import App1 from "../src/hospitals/doctor-hospital/App1";
 import MedicineDetail from "./pages/MedicineDetail";
 import { AuthProvider } from "./context/AuthContext";
 import BlogDetail from "./pages/BlogDetail";

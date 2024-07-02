@@ -1,5 +1,5 @@
 import React from "react";
-import "./hospital.css";
+import "../doctor-hospital/hospital.css";
 
 function AboutHospital() {
   return (
