@@ -18,6 +18,7 @@ import Nephrologist from "./doctors/Nephrologist";
 import Gastroenterologists from "./doctors/Gastroenterologists";
 import AllDoctors from "./doctors/AllDoctors";
 import DoctorProfile from "./doctors/DoctorProfile";
+import Omar from "./hospitals/omar-hospital/omarhospital";
 
 const router = createBrowserRouter([
   {
@@ -79,6 +80,10 @@ const router = createBrowserRouter([
   {
     path: "doctors/:id",
     element: <DoctorProfile />,
+  },
+  {
+    path: "omar",
+    element: <Omar />,
   },
 ]);
 

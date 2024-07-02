@@ -5,8 +5,7 @@ function HospitalDetails() {
     <div className="hospital-details mt-5">
       <h1>Doctors Hospital</h1>
       <p className="text-muted">
-        152-G, 1 Canal Rd, Block G1 Block G 1 Phase 1 Johar Town, Lahore, Punjab
-        54590, Pakistan
+        152 G 1 Canal Bank Road, Johar Town, Lahore, Punjab, Pakistan
       </p>
       <div className="mb-4">
         <img
@@ -20,7 +19,7 @@ function HospitalDetails() {
         Punjab. It is a huge six-story building that was established in 2000...
       </p>
       <a
-        href="https://maps.app.goo.gl/uYdXErToYdALbWWk8"
+        href="https://www.google.com/maps/search/?api=1&query=31.480204370946485,74.28092861534148"
         className="btn btn-success"
       >
         Get Directions

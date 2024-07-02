@@ -47,7 +47,7 @@ function NavBar() {
               <NavDropdown.Item href="#action/3.2">
                 Shalamar Hospital
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
+              <NavDropdown.Item as={Link} to="/omar">
                 Omar Hospital
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -87,8 +87,8 @@ function NavBar() {
               </>
             ) : (
               <Nav.Link as={Link} to="/login">
-              Sign In
-            </Nav.Link>
+                Sign In
+              </Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>
