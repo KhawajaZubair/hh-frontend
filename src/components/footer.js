@@ -19,25 +19,27 @@ function Footer() {
           <p className="ft-list-title">Website</p>
           <ul className="ft-list-items">
             <li>
-              <a href="#services">Doctors</a>
+              <Link to={"/all-doctors"}>Doctors</Link>
             </li>
             <li>
-              <a href="#services">Medicines</a>
+              <Link to={"/medicine-page"}>Medicines</Link>
             </li>
             <li>
-              <a href="#services">Hospitals</a>
+              <Link to={"/legal"}>Hospitals</Link>
             </li>
             <li>
-              <a href="#services">Lab Test</a>
+              <Link to={"https://chughtailab.com/home-sampling/"}>
+                Lab Test
+              </Link>
             </li>
             <li>
-              <a href="#services">Symptom Checker</a>
+              <Link to={"/services"}>Symptom Checker</Link>
             </li>
             <li>
-              <a href="#services">About Us</a>
+              <Link to={"/about-page"}>About Us</Link>
             </li>
             <li>
-              <a href="#services">Blogs</a>
+              <Link to={"/blog-page"}>Blogs</Link>
             </li>
           </ul>
         </div>
@@ -46,16 +48,16 @@ function Footer() {
           <p className="ft-list-title">Top Specialties</p>
           <ul className="ft-list-items">
             <li>
-              <Link to={"/legal"}>Dermatologist</Link>
+              <Link to={"/dermatologists"}>Dermatologist</Link>
             </li>
             <li>
-              <Link to={"/legal"}>Gynecologist</Link>
+              <Link to={"/nephrologist"}>Nephrologists</Link>
+            </li>
+            <li>
+              <Link to={"/gastroenterologists"}>Gastroenterologist</Link>
             </li>
             <li>
               <Link to={"/legal"}>Neurologist</Link>
-            </li>
-            <li>
-              <Link to={"/legal"}>Gastroenterologist</Link>
             </li>
             <li>
               <Link to={"/legal"}>Ophthalmologist</Link>

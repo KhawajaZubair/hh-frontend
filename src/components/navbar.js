@@ -37,7 +37,9 @@ function NavBar() {
                 All Doctors
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/medicine-page">Medicines</Nav.Link>
+            <Nav.Link as={Link} to="/medicine-page">
+              Medicines
+            </Nav.Link>
             <NavDropdown title="Hospitals" id="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link} to="/app1">
                 Doctors Hospital
@@ -70,7 +72,9 @@ function NavBar() {
                 Zeenat Labs
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="/about-page">About</Nav.Link>
+            <Nav.Link as={Link} to="/about-page">
+              About
+            </Nav.Link>
             <Link to="/blog-page" className="nav-link">
               Blogs
             </Link>
@@ -82,7 +86,9 @@ function NavBar() {
                 <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
               </>
             ) : (
-              <Nav.Link href="/login">Sign In</Nav.Link>
+              <Nav.Link as={Link} to="/login">
+              Sign In
+            </Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>

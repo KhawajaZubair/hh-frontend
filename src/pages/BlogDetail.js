@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../Style/blogdetail.css";
 import NavBar from "../components/navbar";
+import Loader from "../components/loader"; 
 import Blog1 from "../Assets/Blogpost/Blog1.jpg";
 import Blog2 from "../Assets/Blogpost/Blog2.jpg";
 import Blog3 from "../Assets/Blogpost/Blog3.jpg";
@@ -28,7 +29,7 @@ const BlogDetail = () => {
   }, [id]);
 
   if (!post) {
-    return <div>Loading...</div>;
+    return <Loader />; // Show loader while fetching data
   }
 
   const imageName = post.image;

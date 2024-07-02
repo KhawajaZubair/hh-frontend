@@ -1,10 +1,10 @@
-// src/components/DoctorProfile.js
 import "../doctors/doctorprofile.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
+import Loader from "../components/loader"; // Import the Loader component
 import Nephro01 from "../Assets/doctors/Nephro01.webp";
 import Nephro02 from "../Assets/doctors/Nephro02.webp";
 import Nephro03 from "../Assets/doctors/Nephro03.webp";
@@ -54,7 +54,7 @@ const DoctorProfile = () => {
   }, [id]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />; // Show loader while fetching data
   }
 
   if (error) {

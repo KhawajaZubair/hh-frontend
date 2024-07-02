@@ -1,7 +1,9 @@
+// MedicineDetail.js
 import React, { useEffect, useState } from "react";
 import NavBar from "../components/navbar";
 import Footer from "../components/footer";
 import { useParams } from "react-router-dom";
+import Loader from "../components/loader"; // Import the Loader component
 import Panadol from "../Assets/medicine-page-img/Panadol.png";
 import Tylenol from "../Assets/medicine-page-img/Tylenol.png";
 import Advil from "../Assets/medicine-page-img/Advil.png";
@@ -73,7 +75,7 @@ const MedicineDetail = () => {
   }, [id]);
 
   if (!medicine) {
-    return <div>Loading...</div>;
+    return <Loader />; // Show loader while fetching data
   }
 
   const imageName = medicine.med_image.split(".")[0];

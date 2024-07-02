@@ -47,7 +47,7 @@ function SignUp() {
         setSuccess("Registration successful! Redirecting to login page...");
         setTimeout(() => {
           navigate("/login");
-        }, 3000); // Redirect after 3 seconds
+        }, 2000); // Redirect after 2 seconds
       }
     } catch (err) {
       setError("Network error: " + err.message);
