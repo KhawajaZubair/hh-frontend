@@ -16,6 +16,7 @@ const imageMap = {
   Blog4: Blog4,
   Blog5: Blog5,
 };
+
 const BlogPage = () => {
   const [blogPosts, setBlogPosts] = useState([]);
 
@@ -39,7 +40,7 @@ const BlogPage = () => {
         {blogPosts.map((post, index) => (
           <div key={index} className="blog-post">
             <div className="blog-image">
-              <img src={imageMap[post.image]} alt="Blog Picture" />
+              <img src={imageMap[post.image]} alt={post.title} />
             </div>
             <div className="blog-info">
               <h2 className="blog-title">{post.title}</h2>

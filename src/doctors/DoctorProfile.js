@@ -34,7 +34,8 @@ const DoctorProfile = () => {
   useEffect(() => {
     const fetchDoctor = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:8000/api/doctors/${id}`);
+        console.log("Fetching doctor with id:", id); // Debug log
+        const response = await fetch(`http://127.0.0.1:8000/api/doctor/${id}`);
         if (!response.ok) {
           throw new Error(
             `Network response was not ok: ${response.statusText}`
