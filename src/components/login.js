@@ -1,4 +1,3 @@
-// src/components/Login.js
 import "../Style/login.css";
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";

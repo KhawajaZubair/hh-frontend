@@ -131,6 +131,7 @@ const DoctorProfile = () => {
         <h2>Fee</h2>
         <p>{doctor.fee}</p>
         {renderList("Date and Time", doctor.date_and_time)}
+        
       </div>
       <Footer />
     </div>
