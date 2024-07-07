@@ -82,7 +82,11 @@ function NavBar() {
           <Nav>
             {user ? (
               <>
-                <Nav.Link> {user.name}</Nav.Link>
+                <Nav.Link as={Link} to="/user-profile">
+                  {" "}
+                  {/* Updated here */}
+                  {user.name}
+                </Nav.Link>
                 <Nav.Link onClick={handleLogout}>Logout</Nav.Link>
               </>
             ) : (

@@ -21,6 +21,8 @@ import DoctorProfile from "./doctors/DoctorProfile";
 import Omar from "./hospitals/omar-hospital/omarhospital";
 import Shalamar from "./hospitals/shalamar-hospital/shalamarhospital";
 import Hospitals from "./hospitals/all-hospitals/Hospitals";
+import UserProfile from "./components/UserProfile";
+
 
 const router = createBrowserRouter([
   {
@@ -94,6 +96,10 @@ const router = createBrowserRouter([
   {
     path: "all-hospitals",
     element: <Hospitals />,
+  },
+  {
+    path: "user-profile",
+    element: <UserProfile />,
   },
 ]);
 
