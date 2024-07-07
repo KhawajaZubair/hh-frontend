@@ -4,6 +4,7 @@ import Nephro01 from "../../Assets/doctors/Nephro01.webp";
 import Nephro02 from "../../Assets/doctors/Nephro02.webp";
 import Derma01 from "../../Assets/doctors/Derma01.webp";
 import Derma02 from "../../Assets/doctors/Derma02.webp";
+import BookAppointmentModal from "../../components/BookAppointmentModal";
 
 // Image map for specific doctors
 const imageMap = {
@@ -17,6 +18,19 @@ function DoctorList() {
   const [doctors, setDoctors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedDoctorId, setSelectedDoctorId] = useState(null);
+
+  const handleShowModal = (e, doctorId) => {
+    e.preventDefault();
+    setSelectedDoctorId(doctorId);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+    setSelectedDoctorId(null);
+  };
 
   useEffect(() => {
     const fetchDoctors = async () => {
@@ -85,15 +99,14 @@ function DoctorList() {
                     <strong>Experience:</strong> {doctor.experiences}
                   </p>
                   <div className="d-flex flex-column">
-                    <Link
-                      to={`/doctors/${doctor.id}`}
-                      className="doc-links"
-                    >
+                    <Link to={`/doctors/${doctor.id}`} className="doc-links">
                       View Profile
                     </Link>
                     <Link
-                      to={`/doctors/${doctor.id}`}
+                      to="#"
                       className="doc-links"
+                      onClick={(e) => handleShowModal(e, doctor.id)}
+                      style={{ cursor: "pointer" }}
                     >
                       Book Appointment
                     </Link>
@@ -106,6 +119,11 @@ function DoctorList() {
           <div>No doctors found from Doctors Hospital.</div>
         )}
       </div>
+      <BookAppointmentModal
+        show={showModal}
+        handleClose={handleCloseModal}
+        doctorId={selectedDoctorId}
+      />
     </div>
   );
 }

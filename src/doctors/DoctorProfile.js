@@ -13,6 +13,8 @@ import Derma01 from "../Assets/doctors/Derma01.webp";
 import Derma02 from "../Assets/doctors/Derma02.webp";
 import Gastro01 from "../Assets/doctors/Gastro01.webp";
 import Gastro02 from "../Assets/doctors/Gastro02.jpeg";
+import { Link } from "react-router-dom"; // Import Link component
+import BookAppointmentModal from "../components/BookAppointmentModal"; // Import the modal component
 
 const imageMap = {
   "Assoc. Prof. Dr. Fowad Shahzad Warraich": Nephro01,
@@ -30,6 +32,14 @@ const DoctorProfile = () => {
   const [doctor, setDoctor] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showModal, setShowModal] = useState(false); // State for modal visibility
+
+  const handleShowModal = (e) => {
+    e.preventDefault(); // Prevent the default action of the link
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => setShowModal(false);
 
   useEffect(() => {
     const fetchDoctor = async () => {
@@ -131,9 +141,23 @@ const DoctorProfile = () => {
         <h2>Fee</h2>
         <p>{doctor.fee}</p>
         {renderList("Date and Time", doctor.date_and_time)}
-        
+
+        {/* Book Appointment Link */}
+        <Link
+          to="#"
+          className="doc-links"
+          onClick={handleShowModal}
+          style={{ cursor: "pointer" }}
+        >
+          Book Appointment
+        </Link>
       </div>
       <Footer />
+      <BookAppointmentModal
+        show={showModal}
+        handleClose={handleCloseModal}
+        doctorId={doctor.id}
+      />
     </div>
   );
 };
