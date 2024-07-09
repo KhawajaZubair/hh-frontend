@@ -30,9 +30,62 @@ import Cleocin from "../Assets/medicine-page-img/Cleocin.png";
 import Doxycycline from "../Assets/medicine-page-img/Doxycycline.png";
 import Flagyl from "../Assets/medicine-page-img/Flagyl.png";
 import Paracetamol from "../Assets/medicine-page-img/Paracetamol.png";
+import Klaricid from "../Assets/medicine-page-img/Klaricid.png";
+import Ventolin from "../Assets/medicine-page-img/Ventolin.png";
+import Zestril from "../Assets/medicine-page-img/Zestril.png";
+import Lipitor from "../Assets/medicine-page-img/Lipitor.png";
+import Zoloft from "../Assets/medicine-page-img/Zoloft.png";
+import Celebrex from "../Assets/medicine-page-img/Celebrex.png";
+import Gaviscon from "../Assets/medicine-page-img/Gaviscon.png";
+import Motilium from "../Assets/medicine-page-img/Motilium.png";
+import Neurobion from "../Assets/medicine-page-img/Neurobion.png";
+import Entamizole from "../Assets/medicine-page-img/Entamizole.png";
+import Cataflam from "../Assets/medicine-page-img/Cataflam.png";
+import Norvasc from "../Assets/medicine-page-img/Norvasc.png";
+import Tenormin from "../Assets/medicine-page-img/Tenormin.png";
+import Cozaar from "../Assets/medicine-page-img/Cozaar.png";
+import Glyset from "../Assets/medicine-page-img/Glyset.png";
+import Januvia from "../Assets/medicine-page-img/Januvia.png";
+import Humulin from "../Assets/medicine-page-img/Humulin.png";
+import Diamicron from "../Assets/medicine-page-img/Diamicron.png";
+import Euthyrox from "../Assets/medicine-page-img/Euthyrox.png";
+import Plavix from "../Assets/medicine-page-img/Plavix.png";
+import Zocor from "../Assets/medicine-page-img/Zocor.png";
+import Crestor from "../Assets/medicine-page-img/Crestor.png";
+import Lantus from "../Assets/medicine-page-img/Lantus.png";
+import Tramal from "../Assets/medicine-page-img/Tramal.png";
+import Monurol from "../Assets/medicine-page-img/Monurol.png";
+import Coversyl from "../Assets/medicine-page-img/Coversyl.png";
+import Diamox from "../Assets/medicine-page-img/Diamox.png";
+import Imuran from "../Assets/medicine-page-img/Imuran.png";
+import Xarelto from "../Assets/medicine-page-img/Xarelto.png";
+import Aricept from "../Assets/medicine-page-img/Aricept.png";
+import Remicade from "../Assets/medicine-page-img/Remicade.png";
+import Enbrel from "../Assets/medicine-page-img/Enbrel.png";
+import Methotrexate from "../Assets/medicine-page-img/Methotrexate.png";
+import Imodium from "../Assets/medicine-page-img/Imodium.png";
+import Azomax from "../Assets/medicine-page-img/Azomax.png";
+import Rigix from "../Assets/medicine-page-img/Rigix.png";
+import Brufen from "../Assets/medicine-page-img/Brufen.png";
+import Deltacortril from "../Assets/medicine-page-img/Deltacortril.png";
+import Telfast from "../Assets/medicine-page-img/Telfast.png";
+import Mefloquine from "../Assets/medicine-page-img/Mefloquine.png";
+import Fungizone from "../Assets/medicine-page-img/Fungizone.png";
+import SoluMedrol from "../Assets/medicine-page-img/SoluMedrol.png";
+import Avelox from "../Assets/medicine-page-img/Avelox.png";
+import Diovan from "../Assets/medicine-page-img/Diovan.png";
+import Glucophage from "../Assets/medicine-page-img/Glucophage.png";
+import Jardiance from "../Assets/medicine-page-img/Jardiance.png";
+import Lasix from "../Assets/medicine-page-img/Lasix.png";
+import Digoxin from "../Assets/medicine-page-img/Digoxin.png";
+import Cardizem from "../Assets/medicine-page-img/Cardizem.png";
+import Aldactone from "../Assets/medicine-page-img/Aldactone.png";
+import Amlor from "../Assets/medicine-page-img/Amlor.png";
+import Inderal from "../Assets/medicine-page-img/Inderal.png";
 import "../Style/medicinedetails.css";
 
 const imageMap = {
+  Inderal,
   Panadol,
   Tylenol,
   Advil,
@@ -59,6 +112,57 @@ const imageMap = {
   Nexium,
   Zantac,
   Pepcid,
+  Klaricid,
+  Ventolin,
+  Zestril,
+  Lipitor,
+  Zoloft,
+  Celebrex,
+  Gaviscon,
+  Motilium,
+  Neurobion,
+  Entamizole,
+  Cataflam,
+  Norvasc,
+  Tenormin,
+  Cozaar,
+  Glyset,
+  Januvia,
+  Humulin,
+  Diamicron,
+  Euthyrox,
+  Plavix,
+  Zocor,
+  Crestor,
+  Lantus,
+  Tramal,
+  Monurol,
+  Coversyl,
+  Diamox,
+  Imuran,
+  Xarelto,
+  Aricept,
+  Remicade,
+  Enbrel,
+  Methotrexate,
+  Imodium,
+  Azomax,
+  Rigix,
+  Brufen,
+  Deltacortril,
+  Telfast,
+  Mefloquine,
+  Fungizone,
+  SoluMedrol,
+  Avelox,
+  Diovan,
+  Glucophage,
+  Jardiance,
+  Lasix,
+  Digoxin,
+  Cardizem,
+  Aldactone,
+  Amlor,
 };
 
 const MedicineDetail = () => {
